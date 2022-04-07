@@ -1,0 +1,37 @@
+site_name: Documentacion Goizargi
+repo_url: https://github.com/goizargi/mkdocs
+
+#Cabecera navegacion
+nav:
+    - Inicio: index.md
+    - 'Docker':
+       - 'Info': docker/info_docker.md 
+       - 'Dockerfile': docker/dockerfile.md
+       - 'Comandos': docker/comandos_docker.md
+    - 'Ansible':
+       - 'Info': ansible/info_ansible.md
+       - 'Playbooks': ansible/playbooks_ansible.md
+       - 'GIT': ansible/ansible_git.md
+       - 'AWX': awx/info_awx.md
+       - 'Ansible Tower': awx/info_ansibletower.md   
+    - 'Jenkins':
+       - 'Info': jenkins/info_jenkins.md
+       - 'Agentes': jenkins/agentes_jenkins.md
+       - 'Pipelines/Jobs': jenkins/pipelines_jenkins.md 
+    - 'Kubernetes':
+       - 'Info': kubernetes/info_kubernetes.md 
+       - 'Comandos': kubernetes/comandos_kubernetes.md
+       - 'Dashboard': kubernetes/dashboard_kubernetes.md
+       - 'Pruebas': kubernetes/pruebas_kubernetes.md 
+    - 'nwdiag':
+       - 'Info': nwdiag/info_nwdiag.md
+       - 'Ejercicios': nwdiag/ejercicios_nwdiag.md    
+    - 'CMDB':
+       - 'Documento bienvenida inventario': https://drive.google.com/file/d/10AkHenHMmav9hspnu5HYVHYD7ipjl2CK/view?usp=sharing
+       - 'Servidores + Ansible': cmdb/servidores_ansible.md    
+
+#Tema
+theme: windmill-dark
+
+#Para poder acceder
+dev_addr: '0.0.0.0:8000'

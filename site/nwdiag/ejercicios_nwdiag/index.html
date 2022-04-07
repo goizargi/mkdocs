@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://github.com/goizargi/mkdocs.git/nwdiag/ejercicios_nwdiag/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Ejercicios - Documentacion Goizargi</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Ejercicio 1", url: "#_top", children: [
+          ]},
+          {title: "Ejercicio 2", url: "#ejercicio-2", children: [
+          ]},
+          {title: "Ejercicio 3", url: "#ejercicio-3", children: [
+          ]},
+          {title: "Ejercicio 4", url: "#ejercicio-4", children: [
+          ]},
+          {title: "Ejercicio 5", url: "#ejercicio-5", children: [
+          ]},
+          {title: "Ejercicio 6", url: "#ejercicio-6", children: [
+          ]},
+          {title: "Ejercicio 7", url: "#ejercicio-7", children: [
+          ]},
+          {title: "Ejercicio 8", url: "#ejercicio-8", children: [
+          ]},
+          {title: "Ejercicio 9", url: "#ejercicio-9", children: [
+          ]},
+          {title: "Ejercicio 10", url: "#ejercicio-10", children: [
+          ]},
+          {title: "Ejercicio 11", url: "#ejercicio-11", children: [
+          ]},
+          {title: "Ejercicio 12", url: "#ejercicio-12", children: [
+          ]},
+          {title: "Ejercicio completo", url: "#ejercicio-completo", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+      <script src="../../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../cmdb/servidores_ansible/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../cmdb/servidores_ansible/" class="btn btn-xs btn-link">
+        Servidores + Ansible
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../info_nwdiag/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../info_nwdiag/" class="btn btn-xs btn-link">
+        Info
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h4 id="ejercicio-1">Ejercicio 1</h4>
+<pre><code>@startuml
+nwdiag {
+   network red1{
+       address = "192.168.1.0/24";
+       BBDD [address = "192.168.1.10"];
+       WEB [address = "192.168.1.15, 192.168.1.16"];
+   }
+   network red2{
+       address = "192.168.2.0/24";
+       administracion [address = "192.168.2.10"];
+       taller [address = "192.168.2.15"];
+       WEB [address = "192.168.2.3, 192.168.2.4"];
+       BBDD1;
+       BBDD2;
+
+       //GRUPO CON NODOS DEFINIDOS
+       group BD{
+          BBDD1;
+          BBDD2;
+       }
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="22" src="https://drive.google.com/uc?export=view&amp;id=10dlonQuC4gwS49pxcMCzx3qqyx95JmHX" /></p>
+<h4 id="ejercicio-2">Ejercicio 2</h4>
+<pre><code>@startuml
+nwdiag {
+   //GRUPO FUERA DE LAS DEFINICIONES DE RED
+   group{
+      color = "#FFAAAA";
+      WEB;
+      administracion;
+      taller;
+   }
+   network red1{
+       address = "192.168.1.0/24";
+       BBDD [address = "192.168.1.10"];
+       WEB [address = "192.168.1.15, 192.168.1.16"];
+   }
+   network red2{
+       address = "192.168.2.0/24";
+       administracion [address = "192.168.2.10"];
+       taller [address = "192.168.2.15"];
+       WEB [address = "192.168.2.3, 192.168.2.4"];
+       BBDD1;
+       BBDD2;
+
+       //GRUPO CON NODOS DEFINIDOS
+       group BD{
+          BBDD1;
+          BBDD2;
+       }
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="23" src="https://drive.google.com/uc?export=view&amp;id=10lHUP0DXDPjS4p0Pch2lo2mRd3EFepDy" /></p>
+<h4 id="ejercicio-3">Ejercicio 3</h4>
+<pre><code>@startuml
+nwdiag {
+    group{
+       color = "#FFAAAA";
+       WEB;
+       administracion;
+    }
+    group{
+       color = "#AAAAFF";
+       BBDD;
+       taller;
+    }
+    //ANADIR COLOR Y FORMAS
+    network red1{
+        address = "192.168.1.0/24";
+        color = "blue";
+        BBDD [address = "192.168.1.10", shape = database];
+        WEB [address = "192.168.1.15, 192.168.1.16"];
+    }
+    network red2{
+        address = "192.168.2.0/24";
+        administracion [address = "192.168.2.10"];
+        taller [address = "192.168.2.15"];
+        WEB [address = "192.168.2.3, 192.168.2.4"];
+        BBDD1 [shape = database];
+        BBDD2 [shape = database];
+
+        group BD{
+           BBDD1;
+           BBDD2;
+        }
+    }
+}
+@enduml
+</code></pre>
+<p><img alt="24" src="https://drive.google.com/uc?export=view&amp;id=10mY4M-ydhQNR5Lb3wmUelsKvSlRSFhk8" /></p>
+<h4 id="ejercicio-4">Ejercicio 4</h4>
+<pre><code>@startuml
+!include &lt;office/Servers/application_server&gt;
+nwdiag {
+    group{
+      color = "#FFAAAA";
+      WEB;
+      administracion;
+    }
+    group{
+      color = "#AAAAFF";
+      BBDD;
+      taller;
+    }
+
+    //ANADIR SPRITES
+    network red1{
+        address = "192.168.1.0/24";
+        color = "blue";
+        BBDD [address = "192.168.1.10", shape = database];
+        WEB [address = "192.168.1.15, 192.168.1.16", description = "&lt;$application_server&gt;\n WEB"];
+    }
+    network red2{
+        address = "192.168.2.0/24";
+        administracion [address = "192.168.2.10"];
+        taller [address = "192.168.2.15"];
+        WEB [address = "192.168.2.3, 192.168.2.4"];
+        BBDD1 [shape = database];
+        BBDD2 [shape = database];
+
+        group BD{
+           BBDD1;
+           BBDD2;
+        }
+    }
+}
+@enduml
+</code></pre>
+<p><img alt="25" src="https://drive.google.com/uc?export=view&amp;id=10psXT852rXiiMRiWrkskY8vnxldXnIe0" /></p>
+<h4 id="ejercicio-5">Ejercicio 5</h4>
+<pre><code>@startuml
+nwdiag {
+    group{
+  color = "#FFAAAA";
+      WEB;
+      administracion;
+    }
+
+    group{
+      color = "#AAAAFF";
+      BBDD;
+      taller;
+    }
+
+    //ANADIR ICONOS
+    network red1{
+        address = "192.168.1.0/24";
+        color = "blue";
+        BBDD [address = "192.168.1.10", shape = database];
+        WEB [address = "192.168.1.15, 192.168.1.16"];
+    }
+    network red2{
+        address = "192.168.2.0/24";
+        administracion [address = "192.168.2.10"];
+        taller [address = "192.168.2.15", description = "&lt;&amp;person*4&gt;\n taller"];
+        WEB [address = "192.168.2.3, 192.168.2.4"];
+        BBDD1 [shape = database];
+        BBDD2 [shape = database];
+
+        group BD{
+           BBDD1;
+           BBDD2;
+        }
+    }
+}
+@enduml
+</code></pre>
+<p><img alt="26" src="https://drive.google.com/uc?export=view&amp;id=10rmcdd4wTZPjCdb8l7Smn_vAiqNtO8Sm" /></p>
+<h4 id="ejercicio-6">Ejercicio 6</h4>
+<pre><code>@startuml
+nwdiag {
+   group{
+      color = "#FFAAAA";
+      WEB;
+      administracion;
+   }
+   group{
+      color = "#AAAAFF";
+      BBDD;
+      taller;
+   }
+
+   network red1{
+      address = "192.168.1.0/24";
+      color = "blue";
+      BBDD [address = "192.168.1.10", shape = database];
+      WEB [address = "192.168.1.15, 192.168.1.16"];
+   }
+   network red2{
+      address = "192.168.2.0/24";
+      administracion [address = "192.168.2.10"];
+      taller [address = "192.168.2.15", description = "&lt;&amp;person*4&gt;\n taller"];
+      WEB [address = "192.168.2.3, 192.168.2.4"];
+      BBDD1 [shape = database];
+      BBDD2 [shape = database];
+
+      group BD{
+         BBDD1;
+         BBDD2;
+      }
+   }
+
+   //MISMOS NODOS EN MAS DE DOS REDES
+   network red3{
+      address = "192.168.3.0/24";
+      color = "green";
+      BBDD;
+      WEB;
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="27" src="https://drive.google.com/uc?export=view&amp;id=10wKCpuvsnpzOk-tzzmYbquc3-SmvEJ3X" /></p>
+<h4 id="ejercicio-7">Ejercicio 7</h4>
+<pre><code>@startuml
+nwdiag {
+   //RED VERTICAL
+   internet [shape = cloud];
+   internet -- router;
+
+   network{
+       router;
+       WEB;
+       BBDD;
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="28" src="https://drive.google.com/uc?export=view&amp;id=10wwhRuCNFnymla-Wt1mvLmcPWB-BeRq_" /></p>
+<h4 id="ejercicio-8">Ejercicio 8</h4>
+<pre><code>@startuml
+nwdiag {
+   //RED VERTICAL SIN GRUPO
+   internet [shape = cloud];
+   internet -- router;
+
+   network red1{
+       router;
+       WEB;
+   }
+   network red2{
+       WEB;
+       BBDD;
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="29" src="https://drive.google.com/uc?export=view&amp;id=10zmgadZ777-oAP2CDSb2uJcbat5JOxsy" /></p>
+<h4 id="ejercicio-9">Ejercicio 9</h4>
+<pre><code>@startuml
+nwdiag {
+   //GRUPO PRIMERO
+   internet [shape = cloud];
+   internet -- router;
+
+   group{
+     color = "tomato";
+     WEB;
+     BBDD;
+   }
+   network red1{
+       router;
+       WEB;
+   }
+   network red2{
+       WEB;
+       BBDD;
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="30" src="https://drive.google.com/uc?export=view&amp;id=116qtdM8G2VU0ZINHGsWkQ-BEA4bjQy9M" /></p>
+<h4 id="ejercicio-10">Ejercicio 10</h4>
+<pre><code>@startuml
+nwdiag {
+   //GRUPO SEGUNDO
+   internet [shape = cloud];
+   internet -- router;
+
+   network red1{
+       router;
+       WEB;
+   }
+   group{
+       color = "greenyellow";
+       WEB;
+       BBDD;
+   }
+   network red2{
+       WEB;
+       BBDD;
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="31" src="https://drive.google.com/uc?export=view&amp;id=11Ac9hQs44hEq6CJbyVBRJDGCVqmEK4v0" /></p>
+<h4 id="ejercicio-11">Ejercicio 11</h4>
+<pre><code>@startuml
+nwdiag {
+   //GRUPO TERCERO
+   internet [shape = cloud];
+   internet -- router;
+
+   network red1{
+       router;
+       WEB;
+   }
+   network red2{
+       WEB;
+       BBDD;
+   }
+
+   group{
+      color = "royalblue";
+      WEB;
+      BBDD;
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="32" src="https://drive.google.com/uc?export=view&amp;id=11EUFd0uta6LCRAq6RQu8QO8ZoU6TrZ43" /></p>
+<h4 id="ejercicio-12">Ejercicio 12</h4>
+<pre><code>//ANADIR TITULO, CABECERA, LEYENDA...
+@startuml
+title GRUPOS - 3
+nwdiag {
+   //GRUPO TERCERO
+   internet [shape = cloud];
+   internet -- router;
+
+   network red1{
+       router;
+       WEB;
+   }
+   network red2{
+       WEB;
+       BBDD;
+   }
+
+   group{
+      color = "royalblue";
+      WEB;
+      BBDD;
+   }
+}
+@enduml
+</code></pre>
+<p><img alt="33" src="https://drive.google.com/uc?export=view&amp;id=11PJ4_3-g1xYUs7oDKrlJ6V0IuwMkRqZL" /></p>
+<h4 id="ejercicio-completo">Ejercicio completo</h4>
+<pre><code>@startuml
+nwdiag{
+   internet [shape = cloud];
+   internet -- router;
+      network firewall{
+          width = full;
+          router;
+          equipo01;
+      }
+      network dmz{
+          width = full;
+          address = "192.168.30.0/24";
+          web [address = "192.168.30.3", description = "&lt;&amp;cog*3&gt;\n web", shape = "node"];
+      }
+      network administracion{
+          width = full;
+          address = "192.168.10.0/24";
+          equipo01;
+          impresora [address = "192.168.10.55", description = "&lt;&amp;print*3&gt;\n impresora"];
+          bbdd [shape = database];
+          empleado01 [address = "192.168.10.10", description = "&lt;&amp;person*3&gt;\n empleado01"];
+      }
+      network taller{
+          width = full;
+          address = "192.168.20.0/24";
+          empleado02 [address = "192.168.20.10", description = "&lt;&amp;person*3&gt;\n empleado02"]; 
+          web;
+      }
+
+      group empleados{
+         color = "red";
+         empleado01;
+         empleado02;
+      }
+
+      group{
+        color = "green";
+        web;
+        bbdd;
+      }
+
+}
+@enduml
+</code></pre>
+<p><img alt="34" src="https://drive.google.com/uc?export=view&amp;id=10SYFcDaUphbSEBcrfDKgjr4Igfv2qnH8" /></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../cmdb/servidores_ansible/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../cmdb/servidores_ansible/" class="btn btn-xs btn-link">
+        Servidores + Ansible
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../info_nwdiag/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../info_nwdiag/" class="btn btn-xs btn-link">
+        Info
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>
