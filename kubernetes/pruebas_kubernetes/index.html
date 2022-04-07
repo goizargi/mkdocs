@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <link rel="canonical" href="https://github.com/goizargi/mkdocs.git/kubernetes/pruebas_kubernetes/">
+    
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Pruebas - Documentacion Goizargi</title>
@@ -88,7 +88,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h4 id="crear-un-job">Crear un job</h4>
+    <h4 id="crear-un-job"><strong>Crear un job</strong></h4>
 <ul>
 <li>Comando para crear un job:<pre><code>kubectl create job nombre_job --image=nombre_imagen
 </code></pre>
@@ -96,7 +96,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <p>Ver el job creado en el dashboard:</p>
 <p><img alt="Captura2-1" src="https://user-images.githubusercontent.com/92585491/157858776-2d385db2-43c2-4d2b-8ea0-2deb059b5ecf.png" /></p>
-<h4 id="crear-un-deployment">Crear un deployment</h4>
+<h4 id="crear-un-deployment"><strong>Crear un deployment</strong></h4>
 <pre><code>kubectl apply -f /ruta_fichero.yaml
 </code></pre>
 <ul>
@@ -142,7 +142,7 @@ spec:
 </li>
 </ul>
 <p><img alt="prueba-deployment11" src="https://user-images.githubusercontent.com/92585491/158187872-d306cab7-8a9d-4f89-92ae-057f58abdc8b.png" /></p>
-<h4 id="actualizar-un-deployment">Actualizar un deployment</h4>
+<h4 id="actualizar-un-deployment"><strong>Actualizar un deployment</strong></h4>
 <pre><code>kubectl set image deployment/nginx-deployment nginx=nginx:1.16.1
 </code></pre>
 <p><em>Alternativa</em></p>
@@ -162,7 +162,7 @@ spec:
 </li>
 </ul>
 <p><img alt="prueba-deployment2" src="https://user-images.githubusercontent.com/92585491/158186733-5a6d2be0-06f1-44dd-a74b-76551f87c4b9.PNG" /></p>
-<h3 id="volver-un-deployment-a-la-version-anterior">Volver un deployment a la version anterior</h3>
+<h3 id="volver-un-deployment-a-la-version-anterior"><strong>Volver un deployment a la version anterior</strong></h3>
 <ol>
 <li>
 <p>Crear una actualizacion del deployment con errata</p>
@@ -195,7 +195,7 @@ spec:
 <p><img alt="prueba-deployment3" src="https://user-images.githubusercontent.com/92585491/158186735-d7df96c7-0c0b-4a68-a254-644aa7e452a2.PNG" /></p>
 <p><img alt="prueba-deployment4" src="https://user-images.githubusercontent.com/92585491/158186736-5cba1d89-f874-4576-bf6b-573be650e965.PNG" /></p>
 <p><img alt="prueba-deployment5" src="https://user-images.githubusercontent.com/92585491/158186739-ec1d47bf-c3dd-4b4b-b637-c5ebc30abd2a.PNG" /></p>
-<h4 id="escalar-un-deployment">Escalar un deployment</h4>
+<h4 id="escalar-un-deployment"><strong>Escalar un deployment</strong></h4>
 <pre><code> kubectl scale deployment/nginx-deployment --replicas=10
 </code></pre>
 <ol>
@@ -216,7 +216,7 @@ spec:
 </li>
 </ol>
 <p><img alt="prueba-deployment6" src="https://user-images.githubusercontent.com/92585491/158186741-8dea7374-ade0-4c69-9c0f-dc04eeae3a09.PNG" /></p>
-<h6 id="escalado-automatico-de-un-deployment">Escalado automatico de un deployment</h6>
+<h6 id="escalado-automatico-de-un-deployment"><strong>Escalado automatico de un deployment</strong></h6>
 <ol>
 <li>
 <p>Crear un Dockerfile de php + apache</p>
@@ -353,7 +353,11 @@ spec:
 </div>
 
 <footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+      <p>
+        <a href="https://github.com/goizargi/mkdocs/edit/master/docs/kubernetes/pruebas_kubernetes.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/goizargi/mkdocs/">Windmill Dark</a> theme by None (noraj).</p>
 </footer>
 
 </body>
