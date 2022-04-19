@@ -32,6 +32,10 @@
       var is_top_frame = false;
         
         var pageToc = [
+          {title: "MASSCAN", url: "#_top", children: [
+              {title: "Instalacion", url: "#instalacion" },
+              {title: "Pruebas", url: "#pruebas" },
+          ]},
         ];
 
     </script>
@@ -57,11 +61,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
+    <div class="wm-article-nav pull-right">
+      <a href="../sandmap/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../sandmap/" class="btn btn-xs btn-link">
+        SANDMAP
+      </a>
+    </div>
+    
     <div class="wm-article-nav">
-      <a href="../skipfish/" class="btn btn-xs btn-default pull-left">
+      <a href="../scapy/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../skipfish/" class="btn btn-xs btn-link">
-        SKIPFISH
+        Previous</a><a href="../scapy/" class="btn btn-xs btn-link">
+        SCAPY
       </a>
     </div>
     
@@ -69,7 +83,28 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    
+    <h3 id="masscan"><strong>MASSCAN</strong></h3>
+<p>Masscan produce resultados similares a <strong>Nmap</strong>, el escaner de puertos mas famoso. Internamente opera de manera 
+mas similar a <strong>scanrad</strong>, <strong>unicornscan</strong> y <strong>zmap</strong>. La principal diferencia es el hecho de ser mas veloz comparado 
+con estos otros escaners. Ademas de ser mas flexible, permitiendo rangos de direcciones y rangos de puertos 
+arbitrarios.</p>
+<p>No existen puertos por defecto a escanear, siempre se debe especificarlos. Y los hosts objetivos deben ser siempre 
+direcciones IP o rangos simples, no nombres de dominio.</p>
+<h4 id="instalacion"><strong>Instalacion</strong></h4>
+<pre><code>apt install git make gcc
+git clone https://github.com/robertdavidgraham/masscan
+cd masscan
+make
+make install
+</code></pre>
+<h4 id="pruebas"><strong>Pruebas</strong></h4>
+<pre><code>masscan -p80,8000-8100 IP/subred
+</code></pre>
+<ul>
+<li>Escanea la IP/subred</li>
+<li>Escanea el puerto 80 y los puertos del rango 8000-8100, dentro de la IP/subred</li>
+<li>Para redirigir los resultados a un fichero, agregar "--echo &gt; nombre_fichero.extension" al final del comando</li>
+</ul>
 
   <br>
     
@@ -81,11 +116,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
+    <div class="wm-article-nav pull-right">
+      <a href="../sandmap/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../sandmap/" class="btn btn-xs btn-link">
+        SANDMAP
+      </a>
+    </div>
+    
     <div class="wm-article-nav">
-      <a href="../skipfish/" class="btn btn-xs btn-default pull-left">
+      <a href="../scapy/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../skipfish/" class="btn btn-xs btn-link">
-        SKIPFISH
+        Previous</a><a href="../scapy/" class="btn btn-xs btn-link">
+        SCAPY
       </a>
     </div>
     

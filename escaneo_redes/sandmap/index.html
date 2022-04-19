@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>BWM-NG - Documentacion Goizargi</title>
+    <title>SANDMAP - Documentacion Goizargi</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -32,9 +32,8 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "BWM-NG", url: "#_top", children: [
+          {title: "SANDMAP", url: "#_top", children: [
               {title: "Instalacion", url: "#instalacion" },
-              {title: "Pruebas", url: "#pruebas" },
           ]},
         ];
 
@@ -62,20 +61,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../tcptrack/" class="btn btn-xs btn-default pull-right">
+      <a href="../vault/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../tcptrack/" class="btn btn-xs btn-link">
-        TCPTRACK
+      <a href="../vault/" class="btn btn-xs btn-link">
+        VAULT
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../dstat/" class="btn btn-xs btn-default pull-left">
+      <a href="../masscan/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../dstat/" class="btn btn-xs btn-link">
-        DSTAT
+        Previous</a><a href="../masscan/" class="btn btn-xs btn-link">
+        MASSCAN
       </a>
     </div>
     
@@ -83,16 +82,17 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h3 id="bwm-ng"><strong>BWM-NG</strong></h3>
-<p>Esta herramienta es muy simple, podremos obtener informacion de todas las interfaces de red de forma interactiva, 
-e incluso podremos exportarlo a un determinado formato para posteriormente consultarlo mas facilmente en otro 
-dispositivo.</p>
+    <h3 id="sandmap"><strong>SANDMAP</strong></h3>
+<p><strong>Sandmap</strong> is a tool supporting network and system reconnaissance using the massive Nmap engine. It provides a 
+user-friendly interface, automates and speeds up scanning and allows you to easily use many advanced scanning 
+techniques.</p>
 <hr />
 <h4 id="instalacion"><strong>Instalacion</strong></h4>
-<pre><code>apt install bwm-ng
+<pre><code>git clone --recursive https://github.com/trimstray/sandmap
+cd sandmap
+./setup.sh install
+sandmap
 </code></pre>
-<h4 id="pruebas"><strong>Pruebas</strong></h4>
-<p><img alt="prueba_bwmng" src="https://drive.google.com/uc?export=view&amp;id=12TqAzKNIXmd4UegKoP92j977wSU70nb1" /></p>
 
   <br>
     
@@ -105,20 +105,20 @@ dispositivo.</p>
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../tcptrack/" class="btn btn-xs btn-default pull-right">
+      <a href="../vault/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../tcptrack/" class="btn btn-xs btn-link">
-        TCPTRACK
+      <a href="../vault/" class="btn btn-xs btn-link">
+        VAULT
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../dstat/" class="btn btn-xs btn-default pull-left">
+      <a href="../masscan/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../dstat/" class="btn btn-xs btn-link">
-        DSTAT
+        Previous</a><a href="../masscan/" class="btn btn-xs btn-link">
+        MASSCAN
       </a>
     </div>
     

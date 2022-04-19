@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>BWM-NG - Documentacion Goizargi</title>
+    <title>VAULT - Documentacion Goizargi</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -32,9 +32,8 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "BWM-NG", url: "#_top", children: [
+          {title: "VAULT", url: "#_top", children: [
               {title: "Instalacion", url: "#instalacion" },
-              {title: "Pruebas", url: "#pruebas" },
           ]},
         ];
 
@@ -61,21 +60,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
-    <div class="wm-article-nav pull-right">
-      <a href="../tcptrack/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../tcptrack/" class="btn btn-xs btn-link">
-        TCPTRACK
-      </a>
-    </div>
-    
     <div class="wm-article-nav">
-      <a href="../dstat/" class="btn btn-xs btn-default pull-left">
+      <a href="../sandmap/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../dstat/" class="btn btn-xs btn-link">
-        DSTAT
+        Previous</a><a href="../sandmap/" class="btn btn-xs btn-link">
+        SANDMAP
       </a>
     </div>
     
@@ -83,16 +72,101 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h3 id="bwm-ng"><strong>BWM-NG</strong></h3>
-<p>Esta herramienta es muy simple, podremos obtener informacion de todas las interfaces de red de forma interactiva, 
-e incluso podremos exportarlo a un determinado formato para posteriormente consultarlo mas facilmente en otro 
-dispositivo.</p>
-<hr />
+    <h3 id="vault"><strong>VAULT</strong></h3>
+<ul>
+<li>
+<p>Scan website for the following vulnerabilities</p>
+<ul>
+<li>XSS</li>
+<li>LFI</li>
+<li>RFI</li>
+<li>SQLi</li>
+</ul>
+</li>
+<li>
+<p>Scanner</p>
+<ul>
+<li>Port scanning : ACK, FIN, NULL, XMAS</li>
+<li>IP scanning : Ping Sweep, ARP</li>
+<li>SSL vulnerability scan</li>
+<li>OS scan</li>
+<li>Hash scanner : MD5, SHA1, SHA224, SHA256, SHA512</li>
+</ul>
+</li>
+<li>
+<p>Others</p>
+<ul>
+<li>Information Gathering<ul>
+<li>Clickjacking</li>
+<li>jQuery version checking</li>
+<li>Insecure cookie flags</li>
+<li>Testing HTTP methods</li>
+<li>Insecure headers</li>
+<li>Header/banner grabbing</li>
+<li>Finde<ul>
+<li>Find comments in source code</li>
+<li>Find e-mails in source code</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Session fixation through cookie injection</li>
+<li>Brute force login through authorization headers</li>
+<li>URL Fuzzer</li>
+<li>WHOIS Lookup</li>
+<li>Google Dork</li>
+<li>Error handler checker</li>
+<li>Admin panel finder</li>
+<li>Open redirect vulnerability</li>
+<li>CMS Detection</li>
+<li>Detect Honeypots</li>
+<li>Detect DDoS attack</li>
+<li>Detect De-authentication attack</li>
+<li>Detect ARP spoof attack</li>
+</ul>
+</li>
+<li>
+<p>Crawling</p>
+<ul>
+<li>Crawl a website and collect all the links</li>
+<li>Crawl and scrape the website for images</li>
+</ul>
+</li>
+<li>
+<p>Attacks</p>
+<ul>
+<li>DDoS Attack</li>
+<li>ARP Spoofer</li>
+<li>DNS Spoofer</li>
+<li>De-authentication attack</li>
+<li>Network disassociation attack</li>
+<li>Ping of death</li>
+<li>MAC Flood attack</li>
+</ul>
+</li>
+<li>
+<p>Utilities</p>
+<ul>
+<li>Generate customized backdoor</li>
+<li>Data monitoring</li>
+<li>Keylogger</li>
+<li>SSH Tunelling</li>
+<li>Generate sitemap</li>
+<li>MAC address changer</li>
+<li>Trace route</li>
+</ul>
+</li>
+</ul>
 <h4 id="instalacion"><strong>Instalacion</strong></h4>
-<pre><code>apt install bwm-ng
+<pre><code>git clone https://github.com/abhisharma404/vault.git
+cd vault/
+apt install python3-pip 
+pip3 install virtualenv
+virtualenv venv
+source venv/bin/activate 
+pip3 install -r requirements.txt 
+cd /vault/src
 </code></pre>
-<h4 id="pruebas"><strong>Pruebas</strong></h4>
-<p><img alt="prueba_bwmng" src="https://drive.google.com/uc?export=view&amp;id=12TqAzKNIXmd4UegKoP92j977wSU70nb1" /></p>
 
   <br>
     
@@ -104,21 +178,11 @@ dispositivo.</p>
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
-    <div class="wm-article-nav pull-right">
-      <a href="../tcptrack/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../tcptrack/" class="btn btn-xs btn-link">
-        TCPTRACK
-      </a>
-    </div>
-    
     <div class="wm-article-nav">
-      <a href="../dstat/" class="btn btn-xs btn-default pull-left">
+      <a href="../sandmap/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../dstat/" class="btn btn-xs btn-link">
-        DSTAT
+        Previous</a><a href="../sandmap/" class="btn btn-xs btn-link">
+        SANDMAP
       </a>
     </div>
     
