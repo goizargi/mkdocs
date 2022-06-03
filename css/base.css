@@ -55,7 +55,7 @@ text-decoration: none;
 }
 
 .wm-top-link, .wm-top-link:hover, .wm-top-link:active, .wm-top-link:visited, .wm-top-link:focus {
-color: #969493;
+color: #CC342D;
 text-decoration: none;
 }
 
@@ -239,7 +239,7 @@ cursor: pointer;
 }
 
 span.wm-toc-text {
-  color: #CC342D;
+  color: #969493;
 }
 
 .wm-toc-lev1 > .wm-toc-text { padding-left: 14px; }
