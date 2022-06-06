@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Info - Documentacion Goizargi</title>
@@ -21,710 +16,786 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../js/bootstrap-3.3.7.min.js"></script>
     <script src="../../js/highlight.pack.js"></script>
-    
     <base target="_top">
     <script>
       var base_url = '../..';
       var is_top_frame = false;
-        
-        var pageToc = [
-          {title: "Que es?", url: "#_top", children: [
-          ]},
-          {title: "Ejemplos basicos", url: "#ejemplos-basicos", children: [
-              {title: "1. Diagrama simple", url: "#1-diagrama-simple" },
-              {title: "2. Definir multiples direcciones", url: "#2-definir-multiples-direcciones" },
-              {title: "3. Agrupar nodos", url: "#3-agrupar-nodos" },
-              {title: "4. Sintaxis extendida (Para redes/grupos)", url: "#4-sintaxis-extendida-para-redesgrupos" },
-              {title: "5. Sprites", url: "#5-sprites" },
-              {title: "6. Iconos", url: "#6-iconos" },
-              {title: "7. Mismos nodos en mas de dos redes", url: "#7-mismos-nodos-en-mas-de-dos-redes" },
-              {title: "8. Redes pares (Peer Networks)", url: "#8-redes-pares-peer-networks" },
-              {title: "9. Redes pares y grupos", url: "#9-redes-pares-y-grupos" },
-              {title: "10. Anadir titulo, texto, cabecera, pie o leyenda en el diagrama", url: "#10-anadir-titulo-texto-cabecera-pie-o-leyenda-en-el-diagrama" },
-              {title: "11. Otras redes internas", url: "#11-otras-redes-internas" },
-              {title: "12. Apendice: Todas las formas en nwdiag", url: "#12-apendice-todas-las-formas-en-nwdiag" },
-          ]},
-        ];
-
+      var pageToc = [
+        {title: "Que es?", url: "#_top", children: [
+        ]},
+        {title: "Ejemplos basicos", url: "#ejemplos-basicos", children: [
+            {title: "1. Diagrama simple", url: "#1-diagrama-simple" },
+            {title: "2. Definir multiples direcciones", url: "#2-definir-multiples-direcciones" },
+            {title: "3. Agrupar nodos", url: "#3-agrupar-nodos" },
+            {title: "4. Sintaxis extendida (Para redes/grupos)", url: "#4-sintaxis-extendida-para-redesgrupos" },
+            {title: "5. Sprites", url: "#5-sprites" },
+            {title: "6. Iconos", url: "#6-iconos" },
+            {title: "7. Mismos nodos en mas de dos redes", url: "#7-mismos-nodos-en-mas-de-dos-redes" },
+            {title: "8. Redes pares (Peer Networks)", url: "#8-redes-pares-peer-networks" },
+            {title: "9. Redes pares y grupos", url: "#9-redes-pares-y-grupos" },
+            {title: "10. Anadir titulo, texto, cabecera, pie o leyenda en el diagrama", url: "#10-anadir-titulo-texto-cabecera-pie-o-leyenda-en-el-diagrama" },
+            {title: "11. Otras redes internas", url: "#11-otras-redes-internas" },
+            {title: "12. Apendice: Todas las formas en nwdiag", url: "#12-apendice-todas-las-formas-en-nwdiag" },
+        ]},
+      ];
     </script>
     <script src="../../js/base.js"></script>
-      <script src="../../search/main.js"></script> 
-</head>
+    <script src="../../search/main.js"></script> 
+  </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
-
-
-
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
-    
-
-    
-    
-      
-    
-
+  <body>
+    <script>
+      if (is_top_frame) { $('body').addClass('wm-top-page'); }
+    </script>
+    <div class="container-fluid wm-page-content">
+      <a name="_top"></a>
  <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../ejercicios_nwdiag/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../ejercicios_nwdiag/" class="btn btn-xs btn-link">
+            Ejercicios
+          </a>
+        </div>
     
-    <div class="wm-article-nav pull-right">
-      <a href="../ejercicios_nwdiag/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../ejercicios_nwdiag/" class="btn btn-xs btn-link">
-        Ejercicios
-      </a>
+        <div class="wm-article-nav">
+          <a href="../../kubernetes/pruebas_kubernetes/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../../kubernetes/pruebas_kubernetes/" class="btn btn-xs btn-link">
+            Pruebas
+          </a>
+        </div> 
+      </div>-->
+      <h3 id="que-es">Que es?</h3>
+      <p>nwdiag permite dibujar diagramas de red. </p>
+      <h3 id="ejemplos-basicos">Ejemplos basicos</h3>
+      <h4 id="1-diagrama-simple">1. Diagrama simple</h4>
+      <ol>
+        <li>
+          <p>Definir una red</p>
+          <pre>
+            <code>
+              @startuml
+              nwdiag {
+                 network dmz {
+                     address = "210.x.x.x/24"
+                 }
+              }
+              @enduml
+            </code>
+          </pre>
+        </li>
+        <li>
+          <p>Definir elementos/servidores en una red</p>
+          <pre>
+            <code>
+              @startuml
+              nwdiag {
+                network dmz {
+                    address = "210.x.x.x/24"
+
+                    web01 [address = "210.x.x.1"];
+                    web02 [address = "210.x.x.2"];
+                }
+              }
+              @enduml
+            </code>
+          </pre>
+          <p>
+            <img alt="1" src="https://drive.google.com/uc?export=view&amp;id=1iYd3dLEl362d9FJOZxRrwkn4g_M2z_ff" />
+          </p>
+        </li>
+        <li>
+          <p>Ejemplo completo</p>
+          <pre>
+            <code>
+              @startuml
+              nwdiag {
+              network dmz {
+                  address = "210.x.x.x/24"
+
+                  web01 [address = "210.x.x.1"];
+                  web02 [address = "210.x.x.2"];
+              }
+              network internal {
+                  address = "172.x.x.x/24";
+
+                  web01 [address = "172.x.x.1"];
+                  web02 [address = "172.x.x.2"];
+                  db01;
+                  db02;
+              }
+            }
+            @enduml
+          </code>
+        </pre>
+        <p>
+          <img alt="2" src="https://drive.google.com/uc?export=view&amp;id=1V84Q1385h1vfqUltpZ9iRN4OUdijiey5" />
+        </p>
+       </li>
+      </ol>
+      <h4 id="2-definir-multiples-direcciones">2. Definir multiples direcciones</h4>
+      <pre>
+        <code> 
+          @startuml
+           nwdiag {
+             network dmz {
+                 address = "210.x.x.x/24"
+                 // Definir varias direcciones (usando coma)
+                 web01 [address = "210.x.x.1, 210.x.x.20"];
+                 web02 [address = "210.x.x.2"];
+             }
+             network internal {
+                 address = "172.x.x.x/24";
+                 web01 [address = "172.x.x.1"];
+                 web02 [address = "172.x.x.2"];
+                 db01;
+                 db02;
+             }
+           }
+           @enduml
+        </code>
+      </pre>
+      <p>
+        <img alt="3" src="https://drive.google.com/uc?export=view&amp;id=1-2V-OvZXraCJclNGCM2E5qlO8J6QUtyF" />
+      </p>
+      <h4 id="3-agrupar-nodos">3. Agrupar nodos</h4>
+      <ol>
+        <li>
+          <p>Definir un grupo dentro de las definiciones de red</p>
+          <pre>
+            <code>
+              @startuml
+              nwdiag {
+                network Sample_front {
+                   address = "192.168.10.0/24";
+
+                   // definir grupo
+                   group web {
+                   web01 [address = ".1"];
+                   web02 [address = ".2"];
+                   }
+                }
+                network Sample_back {
+                   address = "192.168.20.0/24";
+                   web01 [address = ".1"];
+                   web02 [address = ".2"];
+                   db01 [address = ".101"];
+                   db02 [address = ".102"];
+
+                   // definir una red usando nodos previamente definidos
+                   group db {
+                     db01;
+                     db02;
+                   }
+                }
+              }
+              @enduml
+            </code>
+          </pre>
+          <p>
+            <img alt="4" src="https://drive.google.com/uc?export=view&amp;id=1-3rMTElxN2xGahhFxqAEsFvSImm6LWmc" />
+          </p>
+        </li>
+        <li>
+        <p>Definir un grupo fuera de las definiciones de red</p>
+        <pre>
+          <code>
+            @startuml
+            nwdiag {
+              // definir el grupo fuera de las definiones de red
+              group {
+                color = "#FFAAAA";
+
+                web01;
+                web02;
+                db01;
+              }
+
+              network dmz {
+                web01;
+                web02;
+              }
+              network internal {
+                web01;
+                web02;
+                db01;
+                db02;
+              }
+            }
+            @enduml
+          </code>
+        </pre>
+        <p>
+          <img alt="5" src="https://drive.google.com/uc?export=view&amp;id=1-9jT-ah1MBJs2ktmXMnwLggHgEgB66hG" />
+        </p>
+      </li>
+      <li>
+        <p>Definir varios grupos en la misma red</p>
+        <p>3.1. Ejemplo con 2 grupos</p>
+        <pre>
+          <code>
+            @startuml
+            nwdiag {
+              group {
+                color = "#FFaaaa";
+                web01;
+                db01;
+              }
+              group {
+                color = "#aaaaFF";
+                web02;
+                db02;
+              }
+              network dmz {
+                  address = "210.x.x.x/24"
+
+                  web01 [address = "210.x.x.1"];
+                  web02 [address = "210.x.x.2"];
+              }
+              network internal {
+                  address = "172.x.x.x/24";
+
+                  web01 [address = "172.x.x.1"];
+                  web02 [address = "172.x.x.2"];
+                  db01 ;
+                  db02 ;
+              }
+             }
+            @enduml
+          </code>
+        </pre>
+        <p>
+          <img alt="6" src="https://drive.google.com/uc?export=view&amp;id=1-ACA3e8XcFLGb9PT-b1aJE-aaGXR0xRq" />
+        </p>
+        <p>3.2. Ejemplo con 3 grupos</p>
+        <pre>
+          <code>
+            @startuml
+            nwdiag {
+              group {
+                 color = "#FFaaaa";
+                 web01;
+                 db01;
+              }
+              group {
+                 color = "#aaFFaa";
+                 web02;
+                 db02;
+              }
+              group {
+                 color = "#aaaaFF";
+                 web03;
+                 db03;
+              }
+
+              network dmz {
+                  web01;
+                  web02;
+                  web03;
+              }
+              network internal {
+                  web01;
+                  db01 ;
+                  web02;
+                  db02 ;
+                  web03;
+                  db03;
+              }
+            }
+            @enduml
+          </code>
+        </pre>
+        <p>
+          <img alt="7" src="https://drive.google.com/uc?export=view&amp;id=1-E_Yiu618BzogEr5O_RAN1XQNVImnLXY" />
+        </p>
+      </li>
+    </ol>
+    <h4 id="4-sintaxis-extendida-para-redesgrupos">4. Sintaxis extendida (Para redes/grupos)</h4>
+    <ol>
+      <li>
+        <p>Redes - Se pueden agregar varias direcciones, color, descripcion, forma</p>
+          <pre>
+            <code>
+              @startuml
+              nwdiag {
+                network Sample_front {
+                  address = "192.168.10.0/24"
+                  color = "red"
+
+                  // definir grupo
+                  group web {
+                    web01 [address = ".1, .2", shape = "node"]
+                    web02 [address = ".2, .3"]
+                  }
+                }
+                network Sample_back {
+                   address = "192.168.20.0/24"
+                   color = "palegreen"
+                   web01 [address = ".1"]
+                   web02 [address = ".2"]
+                   db01 [address = ".101", shape = database ]
+                   db02 [address = ".102"]
+
+                   // definir la red usando nodos definidos
+                   group db {
+                     db01;
+                     db02;
+                   }
+                }
+              }
+              @enduml
+            </code>
+          </pre>
+          <p>
+            <img alt="8" src="https://drive.google.com/uc?export=view&amp;id=1-PIfoGapOLImaQE5AsRk9f7Q_wAomkcT" />
+          </p>
+        </li>
+        <li>
+        <p>Grupo - Se puede agregar/cambiar color y descripcion</p>
+        <pre>
+          <code>
+            @startuml
+            nwdiag {
+              group {
+                color = "#CCFFCC";
+                description = "Descripcion del grupo";
+
+                web01;
+                web02;
+                db01;
+              }
+
+              network dmz {
+                  web01;
+                  web02;
+              }
+              network internal {
+                  web01;
+                  web02;
+                  db01 [address = ".101", shape = database];
+              }
+            }
+            @enduml
+          </code>
+        </pre>
+        <p>
+          <img alt="9" src="https://drive.google.com/uc?export=view&amp;id=1-YnCldRTIhPBlahxcoHK8Ui3g-5tdJwL" />
+        </p>
+      </li>
+    </ol>
+    <h4 id="5-sprites">5. Sprites</h4>
+    <p><em>Se pueden usar todos los sprites de la <strong><a href="https://plantuml.com/es/stdlib">Libreria Estandar</a></strong> o cualquier otra libreria</em></p>
+    <p>Usa <em>"&lt;$sprite&gt;"</em> para usar un sprite y <em>\n</em> para una nueva linea</p>
+    <pre>
+      <code>
+        @startuml
+        !include &lt;office/Servers/application_server&gt;
+        !include &lt;office/Servers/database_server&gt;
+
+        nwdiag {
+          network dmz {
+             address = "210.x.x.x/24"
+
+             // Establecer varias direcciones (usando coma)
+             web01 [address = "210.x.x.1, 210.x.x.20",  description = "&lt;$application_server&gt;\n web01"]
+             web02 [address = "210.x.x.2",  description = "&lt;$application_server&gt;\n web02"];
+          }
+          network internal {
+             address = "172.x.x.x/24";
+
+             web01 [address = "172.x.x.1"];
+             web02 [address = "172.x.x.2"];
+             db01 [address = "172.x.x.100",  description = "&lt;$database_server&gt;\n db01"];
+             db02 [address = "172.x.x.101",  description = "&lt;$database_server&gt;\n db02"];
+          }
+        }
+        @enduml
+      </code>
+    </pre>
+    <p><img alt="10" src="https://drive.google.com/uc?export=view&amp;id=1-d-rzaQuZ_pd4_5B62r-qV-7pNJDoMgQ" /></p>
+    <h4 id="6-iconos">6. Iconos</h4>
+    <p>Tambien se pueden usar iconos de <a href="https://plantuml.com/es/openiconic">OpenIconic</a> en la descripcion de un red o grupo.</p>
+    <p>Usa <em>"&lt;$icon&gt;"</em> para crear un icono, <em>"&lt;$icon * n&gt;"</em> para multiplicar el tamano por el factor "n" y <em>"&lt;\n&gt;"</em> para una nueva linea.</p>
+    <pre>
+      <code>
+        @startuml
+        nwdiag {
+          group nightly {
+            color = "#FFAAAA";
+            description = "&lt;&amp;clock&gt; Restarted nightly &lt;&amp;clock&gt;";
+            web02;
+            db01;
+          }
+          network dmz {
+             address = "210.x.x.x/24"
+
+             user [description = "&lt;&amp;person*4.5&gt;\n user1"];
+             web01 [address = "210.x.x.1, 210.x.x.20",  description = "&lt;&amp;cog*4&gt;\nweb01"]
+             web02 [address = "210.x.x.2",  description = "&lt;&amp;cog*4&gt;\nweb02"];
+
+             }
+             network internal {
+                address = "172.x.x.x/24";
+
+                web01 [address = "172.x.x.1"];
+                web02 [address = "172.x.x.2"];
+                db01 [address = "172.x.x.100",  description = "&lt;&amp;spreadsheet*4&gt;\n db01"];
+                db02 [address = "172.x.x.101",  description = "&lt;&amp;spreadsheet*4&gt;\n db02"];
+                ptr  [address = "172.x.x.110",  description = "&lt;&amp;print*4&gt;\n ptr01"];
+             }
+        }
+        @enduml
+      </code>
+    </pre>
+    <p>
+      <img alt="11" src="https://drive.google.com/uc?export=view&amp;id=1-d220GWfBLN3f8y1qzTcI7L5wQPp0cMD" />
+    </p>
+    <h4 id="7-mismos-nodos-en-mas-de-dos-redes">7. Mismos nodos en mas de dos redes</h4>
+    <pre>
+      <code>
+        @startuml
+        nwdiag {
+          // definir el grupo fuera de la definicion de la red
+          group {
+            color = "#7777FF";
+
+            web01;
+            web02;
+            db01;
+          }
+
+          network dmz {
+             color = "pink"
+
+             web01;
+             web02;
+          }
+
+          network internal {
+             web01;
+             web02;
+             db01 [shape = database ];
+          }
+
+          network internal2 {
+             color = "LightBlue";
+
+             web01;
+             web02;
+             db01;
+          }
+
+        }
+        @enduml
+      </code>
+    </pre>
+    <p>
+      <img alt="12" src="https://drive.google.com/uc?export=view&amp;id=1-gcjKMtqMEAUc-V319592R7qrZXTUdVJ" />
+    </p>
+    <h4 id="8-redes-pares-peer-networks">8. Redes pares (Peer Networks)</h4>
+    <p>Las redes pares son simples conexiones entre dos nodos, en las que no se usa la red "busbar" horizontal.</p>
+    <pre>
+      <code>
+        @startuml
+        nwdiag {
+          inet [shape = cloud];
+          inet -- router;
+
+          network {
+             router;
+             web01;
+             web02;
+          }
+        }
+        @enduml
+      </code>
+    </pre>
+    <p>
+      <img alt="13" src="https://drive.google.com/uc?export=view&amp;id=1-hGhQ0Q-jWOR_1wAJH234NQDZkiig7Hz" />
+    </p>
+      <h4 id="9-redes-pares-y-grupos">9. Redes pares y grupos</h4>
+      <ol>
+      <li>
+      <p>Sin grupo</p>
+      <pre>
+        <code>
+          @startuml
+          nwdiag {
+              internet [ shape = cloud];
+              internet -- router;
+
+              network proxy {
+                  router;
+                  app;
+              }
+              network default {
+                  app;
+                  db;
+              }
+          }
+          @enduml
+        </code>
+      </pre>
+      <p>
+        <img alt="14" src="https://drive.google.com/uc?export=view&amp;id=1-mNsmLWasavI-8NUzR4PIPJdU1hAiSTs" />
+      </p>
+    </li>
+    <li>
+      <p>Con un grupo primero</p>
+      <pre>
+        <code>
+          @startuml
+          nwdiag {
+              internet [ shape = cloud];
+              internet -- router;
+
+              group {
+                color = "pink";
+                app;
+                db;
+              }
+
+              network proxy {
+                  router;
+                  app;
+              }
+
+              network default {
+                  app;
+                  db;
+              }
+          }
+          @enduml
+        </code>
+      </pre>
+      <p>
+        <img alt="15" src="https://drive.google.com/uc?export=view&amp;id=1-sGJki6yFkmQn_LHHZdaTHv76dzIl_gz" />
+      </p>
+    </li>
+    <li>
+      <p>Con un grupo segundo</p>
+      <pre>
+        <code>
+          @startuml
+          nwdiag {
+              internet [ shape = cloud];
+              internet -- router;
+
+              network proxy {
+                  router;
+                  app;
+              }
+
+              group {
+                color = "pink";
+                app;
+                db;
+              }
+
+              network default {
+                app;
+                db;
+              }
+          }
+          @enduml
+        </code>
+      </pre>
+      <p>
+        <img alt="16" src="https://drive.google.com/uc?export=view&amp;id=1-samF3AdSSBuELYcydNxTuOB06MmIa_w" />
+      </p>
+    </li>
+    <li>
+      <p>Con un grupo tercero</p>
+      <pre>
+        <code>
+          @startuml
+          nwdiag {
+              internet [ shape = cloud];
+              internet -- router;
+
+              network proxy {
+                  router;
+                  app;
+              }
+              network default {
+                  app;
+                  db;
+              }
+              group {
+                color = "pink";
+                app;
+                db;
+              }
+            }
+            @enduml
+          </code>
+        </pre>
+        <p>
+          <img alt="17" src="https://drive.google.com/uc?export=view&amp;id=1057yzKTDoB6hdXGKwuuAB7GhmFKORmv-" />
+        </p>
+      </li>
+    </ol>
+    <h4 id="10-anadir-titulo-texto-cabecera-pie-o-leyenda-en-el-diagrama">10. Anadir titulo, texto, cabecera, pie o leyenda en el diagrama</h4>
+    <pre>
+        <code>
+          @startuml
+
+          header CABECERA
+
+          footer PIE DE PAGINA
+
+          title TITULO
+
+          nwdiag {
+             network inet {
+                 web01 [shape = cloud]
+             }
+          }
+
+          legend
+            Leyenda
+          end legend
+
+          caption Esto es el texto
+          @enduml
+        </code>
+      </pre>
+      <p>
+        <img alt="18" src="https://drive.google.com/uc?export=view&amp;id=106JkKzXOYiIaLbMDfb-qHGipzZlEYY4_" />
+      </p>
+      <h4 id="11-otras-redes-internas">11. Otras redes internas</h4>
+      <ol>
+        <li>
+          <p>Sin direccion o tipo</p>
+          <pre>
+            <code>
+              @startuml
+              nwdiag {
+                 network LAN1 {
+                     a [address = "a1"];
+                 }
+                 network LAN2 {
+                     a [address = "a2"];
+                     switch;
+                 }
+                 switch -- equip;
+                 equip -- printer;
+              }
+              @enduml
+            </code>
+          </pre>
+          <p>
+            <img alt="19" src="https://drive.google.com/uc?export=view&amp;id=10DqAeMS_3GUVpAaAiaESRH7TpCretilX" />
+          </p>
+        </li>
+        <li>
+          <p>Con direccion o tipo</p>
+          <pre>
+            <code>
+              @startuml
+              nwdiag {
+                 network LAN1 {
+                     a [address = "a1"];
+                 }
+                 network LAN2 {
+                     a [address = "a2"];
+                     switch [address = "s2"];
+                 }
+                 switch -- equip;
+                 equip [address = "e3"];
+                 equip -- printer;
+                 printer [address = "USB"];
+              }
+              @enduml
+            </code>
+          </pre>
+          <p>
+            <img alt="20" src="https://drive.google.com/uc?export=view&amp;id=10EvN9LxKPNe9Fcd1vco9b-9UUYIPTETP" />
+          </p>
+        </li>
+      </ol>
+      <h4 id="12-apendice-todas-las-formas-en-nwdiag">12. Apendice: Todas las formas en <em>nwdiag</em></h4>
+      <pre>
+        <code>
+          @startuml
+          nwdiag {
+             network Network1 {
+                 Actor       [shape = actor]       
+                 Agent       [shape = agent]       
+                 Artifact    [shape = artifact]    
+                 Boundary    [shape = boundary]
+             }
+             network Network2 {
+                 Card        [shape = card]        
+                 Cloud       [shape = cloud]       
+                 Collections [shape = collections]
+                 Component   [shape = component]   
+             }
+             network Network3{
+                 Control     [shape = control]     
+                 Database    [shape = database]    
+                 Entity      [shape = entity]      
+                 File        [shape = file]        
+             } 
+             network Network4{
+                 Folder      [shape = folder]      
+                 Frame       [shape = frame]       
+                 Hexagon     [shape = hexagon]     
+                 Interface   [shape = interface]
+             }
+             network Network5{
+                 Label       [shape = label]       
+                 Node        [shape = node]        
+                 Package     [shape = package]     
+                 Person      [shape = person] 
+             }
+             network Network6{
+                 Queue       [shape = queue]       
+                 Stack       [shape = stack]       
+                 Rectangle   [shape = rectangle]   
+                 Storage     [shape = storage]     
+                 Usecase     [shape = usecase]
+             }
+          }
+          @enduml
+        </code>
+      </pre>
+      <p>
+        <img alt="21" src="https://drive.google.com/uc?export=view&amp;id=10PqYifds43V9jEa2DoI69VBsiiS1bGi1" />
+      </p>
+      <br>
+  <!--<div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../ejercicios_nwdiag/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../ejercicios_nwdiag/" class="btn btn-xs btn-link">
+            Ejercicios
+          </a>
+        </div>
+    
+        <div class="wm-article-nav">
+          <a href="../../kubernetes/pruebas_kubernetes/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../../kubernetes/pruebas_kubernetes/" class="btn btn-xs btn-link">
+            Pruebas
+          </a>
+        </div>
+      </div>-->
+
+      <br>
     </div>
-    
-    <div class="wm-article-nav">
-      <a href="../../kubernetes/pruebas_kubernetes/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../../kubernetes/pruebas_kubernetes/" class="btn btn-xs btn-link">
-        Pruebas
-      </a>
-    </div>
-    
-  </div>-->
 
-    
+    <footer class="col-md-12 wm-page-content">
+      <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+    </footer>
 
-    <h3 id="que-es">Que es?</h3>
-<p>nwdiag permite dibujar diagramas de red. </p>
-<h3 id="ejemplos-basicos">Ejemplos basicos</h3>
-<h4 id="1-diagrama-simple">1. Diagrama simple</h4>
-<ol>
-<li>
-<p>Definir una red</p>
-<pre><code>@startuml
-nwdiag {
-   network dmz {
-       address = "210.x.x.x/24"
-   }
-}
-@enduml
-</code></pre>
-</li>
-<li>
-<p>Definir elementos/servidores en una red</p>
-<pre><code>@startuml
-nwdiag {
-  network dmz {
-      address = "210.x.x.x/24"
-
-      web01 [address = "210.x.x.1"];
-      web02 [address = "210.x.x.2"];
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="1" src="https://drive.google.com/uc?export=view&amp;id=1iYd3dLEl362d9FJOZxRrwkn4g_M2z_ff" /></p>
-</li>
-<li>
-<p>Ejemplo completo</p>
-<pre><code>@startuml
-nwdiag {
-  network dmz {
-      address = "210.x.x.x/24"
-
-      web01 [address = "210.x.x.1"];
-      web02 [address = "210.x.x.2"];
-  }
-  network internal {
-      address = "172.x.x.x/24";
-
-      web01 [address = "172.x.x.1"];
-      web02 [address = "172.x.x.2"];
-      db01;
-      db02;
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="2" src="https://drive.google.com/uc?export=view&amp;id=1V84Q1385h1vfqUltpZ9iRN4OUdijiey5" /></p>
-</li>
-</ol>
-<h4 id="2-definir-multiples-direcciones">2. Definir multiples direcciones</h4>
-<pre><code> @startuml
- nwdiag {
-   network dmz {
-       address = "210.x.x.x/24"
-       // Definir varias direcciones (usando coma)
-       web01 [address = "210.x.x.1, 210.x.x.20"];
-       web02 [address = "210.x.x.2"];
-   }
-   network internal {
-       address = "172.x.x.x/24";
-       web01 [address = "172.x.x.1"];
-       web02 [address = "172.x.x.2"];
-       db01;
-       db02;
-   }
- }
- @enduml
-</code></pre>
-<p><img alt="3" src="https://drive.google.com/uc?export=view&amp;id=1-2V-OvZXraCJclNGCM2E5qlO8J6QUtyF" /></p>
-<h4 id="3-agrupar-nodos">3. Agrupar nodos</h4>
-<ol>
-<li>
-<p>Definir un grupo dentro de las definiciones de red</p>
-<pre><code>@startuml
-nwdiag {
-  network Sample_front {
-     address = "192.168.10.0/24";
-
-     // definir grupo
-     group web {
-     web01 [address = ".1"];
-     web02 [address = ".2"];
-     }
-  }
-  network Sample_back {
-     address = "192.168.20.0/24";
-     web01 [address = ".1"];
-     web02 [address = ".2"];
-     db01 [address = ".101"];
-     db02 [address = ".102"];
-
-     // definir una red usando nodos previamente definidos
-     group db {
-       db01;
-       db02;
-     }
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="4" src="https://drive.google.com/uc?export=view&amp;id=1-3rMTElxN2xGahhFxqAEsFvSImm6LWmc" /></p>
-</li>
-<li>
-<p>Definir un grupo fuera de las definiciones de red</p>
-<pre><code>@startuml
-nwdiag {
-  // definir el grupo fuera de las definiones de red
-  group {
-    color = "#FFAAAA";
-
-    web01;
-    web02;
-    db01;
-  }
-
-  network dmz {
-    web01;
-    web02;
-  }
-  network internal {
-    web01;
-    web02;
-    db01;
-    db02;
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="5" src="https://drive.google.com/uc?export=view&amp;id=1-9jT-ah1MBJs2ktmXMnwLggHgEgB66hG" /></p>
-</li>
-<li>
-<p>Definir varios grupos en la misma red</p>
-<p>3.1. Ejemplo con 2 grupos</p>
-<pre><code>@startuml
-nwdiag {
-  group {
-    color = "#FFaaaa";
-    web01;
-    db01;
-  }
-  group {
-    color = "#aaaaFF";
-    web02;
-    db02;
-  }
-  network dmz {
-      address = "210.x.x.x/24"
-
-      web01 [address = "210.x.x.1"];
-      web02 [address = "210.x.x.2"];
-  }
-  network internal {
-      address = "172.x.x.x/24";
-
-      web01 [address = "172.x.x.1"];
-      web02 [address = "172.x.x.2"];
-      db01 ;
-      db02 ;
-  }
- }
-@enduml
-</code></pre>
-<p><img alt="6" src="https://drive.google.com/uc?export=view&amp;id=1-ACA3e8XcFLGb9PT-b1aJE-aaGXR0xRq" /></p>
-<p>3.2. Ejemplo con 3 grupos</p>
-<pre><code>@startuml
-nwdiag {
-  group {
-     color = "#FFaaaa";
-     web01;
-     db01;
-  }
-  group {
-     color = "#aaFFaa";
-     web02;
-     db02;
-  }
-  group {
-     color = "#aaaaFF";
-     web03;
-     db03;
-  }
-
-  network dmz {
-      web01;
-      web02;
-      web03;
-  }
-  network internal {
-      web01;
-      db01 ;
-      web02;
-      db02 ;
-      web03;
-      db03;
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="7" src="https://drive.google.com/uc?export=view&amp;id=1-E_Yiu618BzogEr5O_RAN1XQNVImnLXY" /></p>
-</li>
-</ol>
-<h4 id="4-sintaxis-extendida-para-redesgrupos">4. Sintaxis extendida (Para redes/grupos)</h4>
-<ol>
-<li>
-<p>Redes - Se pueden agregar varias direcciones, color, descripcion, forma</p>
-<pre><code>@startuml
-nwdiag {
-  network Sample_front {
-    address = "192.168.10.0/24"
-    color = "red"
-
-    // definir grupo
-    group web {
-      web01 [address = ".1, .2", shape = "node"]
-      web02 [address = ".2, .3"]
-    }
-  }
-  network Sample_back {
-     address = "192.168.20.0/24"
-     color = "palegreen"
-     web01 [address = ".1"]
-     web02 [address = ".2"]
-     db01 [address = ".101", shape = database ]
-     db02 [address = ".102"]
-
-     // definir la red usando nodos definidos
-     group db {
-       db01;
-       db02;
-     }
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="8" src="https://drive.google.com/uc?export=view&amp;id=1-PIfoGapOLImaQE5AsRk9f7Q_wAomkcT" /></p>
-</li>
-<li>
-<p>Grupo - Se puede agregar/cambiar color y descripcion</p>
-<pre><code>@startuml
-nwdiag {
-  group {
-    color = "#CCFFCC";
-    description = "Descripcion del grupo";
-
-    web01;
-    web02;
-    db01;
-  }
-
-  network dmz {
-      web01;
-      web02;
-  }
-  network internal {
-      web01;
-      web02;
-      db01 [address = ".101", shape = database];
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="9" src="https://drive.google.com/uc?export=view&amp;id=1-YnCldRTIhPBlahxcoHK8Ui3g-5tdJwL" /></p>
-</li>
-</ol>
-<h4 id="5-sprites">5. Sprites</h4>
-<p><em>Se pueden usar todos los sprites de la <strong><a href="https://plantuml.com/es/stdlib">Libreria Estandar</a></strong> o cualquier otra libreria</em></p>
-<p>Usa <em>"&lt;$sprite&gt;"</em> para usar un sprite y <em>\n</em> para una nueva linea</p>
-<pre><code>@startuml
-!include &lt;office/Servers/application_server&gt;
-!include &lt;office/Servers/database_server&gt;
-
-nwdiag {
-  network dmz {
-     address = "210.x.x.x/24"
-
-     // Establecer varias direcciones (usando coma)
-     web01 [address = "210.x.x.1, 210.x.x.20",  description = "&lt;$application_server&gt;\n web01"]
-     web02 [address = "210.x.x.2",  description = "&lt;$application_server&gt;\n web02"];
-  }
-  network internal {
-     address = "172.x.x.x/24";
-
-     web01 [address = "172.x.x.1"];
-     web02 [address = "172.x.x.2"];
-     db01 [address = "172.x.x.100",  description = "&lt;$database_server&gt;\n db01"];
-     db02 [address = "172.x.x.101",  description = "&lt;$database_server&gt;\n db02"];
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="10" src="https://drive.google.com/uc?export=view&amp;id=1-d-rzaQuZ_pd4_5B62r-qV-7pNJDoMgQ" /></p>
-<h4 id="6-iconos">6. Iconos</h4>
-<p>Tambien se pueden usar iconos de <a href="https://plantuml.com/es/openiconic">OpenIconic</a> en la descripcion de un red o grupo.</p>
-<p>Usa <em>"&lt;$icon&gt;"</em> para crear un icono, <em>"&lt;$icon * n&gt;"</em> para multiplicar el tamano por el factor "n" y <em>"&lt;\n&gt;"</em> para una nueva linea.</p>
-<pre><code>@startuml
-
-nwdiag {
-  group nightly {
-    color = "#FFAAAA";
-    description = "&lt;&amp;clock&gt; Restarted nightly &lt;&amp;clock&gt;";
-    web02;
-    db01;
-  }
-  network dmz {
-     address = "210.x.x.x/24"
-
-     user [description = "&lt;&amp;person*4.5&gt;\n user1"];
-     web01 [address = "210.x.x.1, 210.x.x.20",  description = "&lt;&amp;cog*4&gt;\nweb01"]
-     web02 [address = "210.x.x.2",  description = "&lt;&amp;cog*4&gt;\nweb02"];
-
-     }
-     network internal {
-        address = "172.x.x.x/24";
-
-        web01 [address = "172.x.x.1"];
-        web02 [address = "172.x.x.2"];
-        db01 [address = "172.x.x.100",  description = "&lt;&amp;spreadsheet*4&gt;\n db01"];
-        db02 [address = "172.x.x.101",  description = "&lt;&amp;spreadsheet*4&gt;\n db02"];
-        ptr  [address = "172.x.x.110",  description = "&lt;&amp;print*4&gt;\n ptr01"];
-     }
-}
-@enduml
-</code></pre>
-<p><img alt="11" src="https://drive.google.com/uc?export=view&amp;id=1-d220GWfBLN3f8y1qzTcI7L5wQPp0cMD" /></p>
-<h4 id="7-mismos-nodos-en-mas-de-dos-redes">7. Mismos nodos en mas de dos redes</h4>
-<pre><code>@startuml
-nwdiag {
-  // definir el grupo fuera de la definicion de la red
-  group {
-    color = "#7777FF";
-
-    web01;
-    web02;
-    db01;
-  }
-
-  network dmz {
-     color = "pink"
-
-     web01;
-     web02;
-  }
-
-  network internal {
-     web01;
-     web02;
-     db01 [shape = database ];
-  }
-
-  network internal2 {
-     color = "LightBlue";
-
-     web01;
-     web02;
-     db01;
-  }
-
-}
-@enduml
-</code></pre>
-<p><img alt="12" src="https://drive.google.com/uc?export=view&amp;id=1-gcjKMtqMEAUc-V319592R7qrZXTUdVJ" /></p>
-<h4 id="8-redes-pares-peer-networks">8. Redes pares (Peer Networks)</h4>
-<p>Las redes pares son simples conexiones entre dos nodos, en las que no se usa la red "busbar" horizontal.</p>
-<pre><code>@startuml
-nwdiag {
-  inet [shape = cloud];
-  inet -- router;
-
-  network {
-     router;
-     web01;
-     web02;
-  }
-}
-@enduml
-</code></pre>
-<p><img alt="13" src="https://drive.google.com/uc?export=view&amp;id=1-hGhQ0Q-jWOR_1wAJH234NQDZkiig7Hz" /></p>
-<h4 id="9-redes-pares-y-grupos">9. Redes pares y grupos</h4>
-<ol>
-<li>
-<p>Sin grupo</p>
-<pre><code>@startuml
-nwdiag {
-    internet [ shape = cloud];
-    internet -- router;
-
-    network proxy {
-        router;
-        app;
-    }
-    network default {
-        app;
-        db;
-    }
-}
-@enduml
-</code></pre>
-<p><img alt="14" src="https://drive.google.com/uc?export=view&amp;id=1-mNsmLWasavI-8NUzR4PIPJdU1hAiSTs" /></p>
-</li>
-<li>
-<p>Con un grupo primero</p>
-<pre><code>@startuml
-nwdiag {
-    internet [ shape = cloud];
-    internet -- router;
-
-    group {
-      color = "pink";
-      app;
-      db;
-    }
-
-    network proxy {
-        router;
-        app;
-    }
-
-    network default {
-        app;
-        db;
-    }
-}
-@enduml
-</code></pre>
-<p><img alt="15" src="https://drive.google.com/uc?export=view&amp;id=1-sGJki6yFkmQn_LHHZdaTHv76dzIl_gz" /></p>
-</li>
-<li>
-<p>Con un grupo segundo</p>
-<pre><code>@startuml
-nwdiag {
-    internet [ shape = cloud];
-    internet -- router;
-
-    network proxy {
-        router;
-        app;
-    }
-
-    group {
-      color = "pink";
-      app;
-      db;
-    }
-
-    network default {
-      app;
-      db;
-    }
-}
-@enduml
-</code></pre>
-<p><img alt="16" src="https://drive.google.com/uc?export=view&amp;id=1-samF3AdSSBuELYcydNxTuOB06MmIa_w" /></p>
-</li>
-<li>
-<p>Con un grupo tercero</p>
-<pre><code>@startuml
-nwdiag {
-    internet [ shape = cloud];
-    internet -- router;
-
-    network proxy {
-        router;
-        app;
-    }
-    network default {
-        app;
-        db;
-    }
-    group {
-      color = "pink";
-      app;
-      db;
-    }
-}
-@enduml
-</code></pre>
-<p><img alt="17" src="https://drive.google.com/uc?export=view&amp;id=1057yzKTDoB6hdXGKwuuAB7GhmFKORmv-" /></p>
-</li>
-</ol>
-<h4 id="10-anadir-titulo-texto-cabecera-pie-o-leyenda-en-el-diagrama">10. Anadir titulo, texto, cabecera, pie o leyenda en el diagrama</h4>
-<pre><code>@startuml
-
-header CABECERA
-
-footer PIE DE PAGINA
-
-title TITULO
-
-nwdiag {
-   network inet {
-       web01 [shape = cloud]
-   }
-}
-
-legend
-  Leyenda
-end legend
-
-caption Esto es el texto
-@enduml
-</code></pre>
-<p><img alt="18" src="https://drive.google.com/uc?export=view&amp;id=106JkKzXOYiIaLbMDfb-qHGipzZlEYY4_" /></p>
-<h4 id="11-otras-redes-internas">11. Otras redes internas</h4>
-<ol>
-<li>
-<p>Sin direccion o tipo</p>
-<pre><code>@startuml
-nwdiag {
-   network LAN1 {
-       a [address = "a1"];
-   }
-   network LAN2 {
-       a [address = "a2"];
-       switch;
-   }
-   switch -- equip;
-   equip -- printer;
-}
-@enduml
-</code></pre>
-<p><img alt="19" src="https://drive.google.com/uc?export=view&amp;id=10DqAeMS_3GUVpAaAiaESRH7TpCretilX" /></p>
-</li>
-<li>
-<p>Con direccion o tipo</p>
-<pre><code>@startuml
-nwdiag {
-   network LAN1 {
-       a [address = "a1"];
-   }
-   network LAN2 {
-       a [address = "a2"];
-       switch [address = "s2"];
-   }
-   switch -- equip;
-   equip [address = "e3"];
-   equip -- printer;
-   printer [address = "USB"];
-}
-@enduml
-</code></pre>
-<p><img alt="20" src="https://drive.google.com/uc?export=view&amp;id=10EvN9LxKPNe9Fcd1vco9b-9UUYIPTETP" /></p>
-</li>
-</ol>
-<h4 id="12-apendice-todas-las-formas-en-nwdiag">12. Apendice: Todas las formas en <em>nwdiag</em></h4>
-<pre><code>@startuml
-nwdiag {
-   network Network1 {
-       Actor       [shape = actor]       
-       Agent       [shape = agent]       
-       Artifact    [shape = artifact]    
-       Boundary    [shape = boundary]
-   }
-   network Network2 {
-       Card        [shape = card]        
-       Cloud       [shape = cloud]       
-       Collections [shape = collections]
-       Component   [shape = component]   
-   }
-   network Network3{
-       Control     [shape = control]     
-       Database    [shape = database]    
-       Entity      [shape = entity]      
-       File        [shape = file]        
-   } 
-   network Network4{
-       Folder      [shape = folder]      
-       Frame       [shape = frame]       
-       Hexagon     [shape = hexagon]     
-       Interface   [shape = interface]
-   }
-   network Network5{
-       Label       [shape = label]       
-       Node        [shape = node]        
-       Package     [shape = package]     
-       Person      [shape = person] 
-   }
-   network Network6{
-       Queue       [shape = queue]       
-       Stack       [shape = stack]       
-       Rectangle   [shape = rectangle]   
-       Storage     [shape = storage]     
-       Usecase     [shape = usecase]
-   }
-}
-@enduml
-</code></pre>
-<p><img alt="21" src="https://drive.google.com/uc?export=view&amp;id=10PqYifds43V9jEa2DoI69VBsiiS1bGi1" /></p>
-
-  <br>
-    
-
-    
-    
-      
-    
-
- <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../ejercicios_nwdiag/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../ejercicios_nwdiag/" class="btn btn-xs btn-link">
-        Ejercicios
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href="../../kubernetes/pruebas_kubernetes/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../../kubernetes/pruebas_kubernetes/" class="btn btn-xs btn-link">
-        Pruebas
-      </a>
-    </div>
-    
-  </div>-->
-
-    <br>
-</div>
-
-<footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
-</footer>
-
-</body>
+  </body>
 </html>
