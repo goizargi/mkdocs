@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>VAULT - Documentacion Goizargi</title>
@@ -21,175 +16,153 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../js/bootstrap-3.3.7.min.js"></script>
     <script src="../../js/highlight.pack.js"></script>
-    
     <base target="_top">
     <script>
       var base_url = '../..';
       var is_top_frame = false;
-        
-        var pageToc = [
-          {title: "VAULT", url: "#_top", children: [
-              {title: "Instalacion", url: "#instalacion" },
-          ]},
-        ];
-
+      var pageToc = [
+        {title: "VAULT", url: "#_top", children: [
+            {title: "Instalacion", url: "#instalacion" },
+        ]},
+      ];
     </script>
     <script src="../../js/base.js"></script>
-      <script src="../../search/main.js"></script> 
-</head>
+    <script src="../../search/main.js"></script> 
+  </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
+  <body>
+    <script>
+      if (is_top_frame) { $('body').addClass('wm-top-page'); }
+    </script>
+          <div class="container-fluid wm-page-content">
+            <a name="_top"></a>
+       <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+              <div class="wm-article-nav">
+                <a href="../sandmap/" class="btn btn-xs btn-default pull-left">
+                  <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                  Previous</a><a href="../sandmap/" class="btn btn-xs btn-link">
+                  SANDMAP
+                </a>
+              </div>
+            </div>-->
+            <h3 id="vault"><strong>VAULT</strong></h3>
+            <ul>
+              <li>
+                <p>Scan website for the following vulnerabilities</p>
+                <ul>
+                  <li>XSS</li>
+                  <li>LFI</li>
+                  <li>RFI</li>
+                  <li>SQLi</li>
+                  </ul>
+              </li>
+              <li>
+                <p>Scanner</p>
+                <ul>
+                  <li>Port scanning : ACK, FIN, NULL, XMAS</li>
+                  <li>IP scanning : Ping Sweep, ARP</li>
+                  <li>SSL vulnerability scan</li>
+                  <li>OS scan</li>
+                  <li>Hash scanner : MD5, SHA1, SHA224, SHA256, SHA512</li>
+                </ul>
+              </li>
+              <li>
+                <p>Others</p>
+                  <ul>
+                    <li>Information Gathering
+                      <ul>
+                        <li>Clickjacking</li>
+                        <li>jQuery version checking</li>
+                        <li>Insecure cookie flags</li>
+                        <li>Testing HTTP methods</li>
+                        <li>Insecure headers</li>
+                        <li>Header/banner grabbing</li>
+                        <li>Finde<ul>
+                        <li>Find comments in source code</li>
+                        <li>Find e-mails in source code</li>
+                      </ul>
+                    </li>
+                  </ul>
+              </li>
+              <li>Session fixation through cookie injection</li>
+              <li>Brute force login through authorization headers</li>
+              <li>URL Fuzzer</li>
+              <li>WHOIS Lookup</li>
+              <li>Google Dork</li>
+              <li>Error handler checker</li>
+              <li>Admin panel finder</li>
+              <li>Open redirect vulnerability</li>
+              <li>CMS Detection</li>
+              <li>Detect Honeypots</li>
+              <li>Detect DDoS attack</li>
+              <li>Detect De-authentication attack</li>
+              <li>Detect ARP spoof attack</li>
+            </ul>
+          </li>
+          <li>
+            <p>Crawling</p>
+          <ul>
+            <li>Crawl a website and collect all the links</li>
+            <li>Crawl and scrape the website for images</li>
+          </ul>
+        </li>
+        <li>
+          <p>Attacks</p>
+          <ul>
+            <li>DDoS Attack</li>
+            <li>ARP Spoofer</li>
+            <li>DNS Spoofer</li>
+            <li>De-authentication attack</li>
+            <li>Network disassociation attack</li>
+            <li>Ping of death</li>
+            <li>MAC Flood attack</li>
+          </ul>
+        </li>
+        <li>
+          <p>Utilities</p>
+          <ul>
+            <li>Generate customized backdoor</li>
+            <li>Data monitoring</li>
+            <li>Keylogger</li>
+            <li>SSH Tunelling</li>
+            <li>Generate sitemap</li>
+            <li>MAC address changer</li>
+            <li>Trace route</li>
+          </ul>
+        </li>
+      </ul>
+      <h4 id="instalacion"><strong>Instalacion</strong></h4>
+      <pre>
+        <code>
+          git clone https://github.com/abhisharma404/vault.git
+          cd vault/
+          apt install python3-pip 
+          pip3 install virtualenv
+          virtualenv venv
+          source venv/bin/activate 
+          pip3 install -r requirements.txt 
+          cd /vault/src
+        </code>
+      </pre>
 
-
-
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
-    
-
-    
-    
-      
-    
-
+      <br>
  <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
-    <div class="wm-article-nav">
-      <a href="../sandmap/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../sandmap/" class="btn btn-xs btn-link">
-        SANDMAP
-      </a>
+        <div class="wm-article-nav">
+          <a href="../sandmap/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../sandmap/" class="btn btn-xs btn-link">
+            SANDMAP
+          </a>
+        </div>
+    
+      </div>-->
+
+      <br>
     </div>
-    
-  </div>-->
-
-    
-
-    <h3 id="vault"><strong>VAULT</strong></h3>
-<ul>
-<li>
-<p>Scan website for the following vulnerabilities</p>
-<ul>
-<li>XSS</li>
-<li>LFI</li>
-<li>RFI</li>
-<li>SQLi</li>
-</ul>
-</li>
-<li>
-<p>Scanner</p>
-<ul>
-<li>Port scanning : ACK, FIN, NULL, XMAS</li>
-<li>IP scanning : Ping Sweep, ARP</li>
-<li>SSL vulnerability scan</li>
-<li>OS scan</li>
-<li>Hash scanner : MD5, SHA1, SHA224, SHA256, SHA512</li>
-</ul>
-</li>
-<li>
-<p>Others</p>
-<ul>
-<li>Information Gathering<ul>
-<li>Clickjacking</li>
-<li>jQuery version checking</li>
-<li>Insecure cookie flags</li>
-<li>Testing HTTP methods</li>
-<li>Insecure headers</li>
-<li>Header/banner grabbing</li>
-<li>Finde<ul>
-<li>Find comments in source code</li>
-<li>Find e-mails in source code</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Session fixation through cookie injection</li>
-<li>Brute force login through authorization headers</li>
-<li>URL Fuzzer</li>
-<li>WHOIS Lookup</li>
-<li>Google Dork</li>
-<li>Error handler checker</li>
-<li>Admin panel finder</li>
-<li>Open redirect vulnerability</li>
-<li>CMS Detection</li>
-<li>Detect Honeypots</li>
-<li>Detect DDoS attack</li>
-<li>Detect De-authentication attack</li>
-<li>Detect ARP spoof attack</li>
-</ul>
-</li>
-<li>
-<p>Crawling</p>
-<ul>
-<li>Crawl a website and collect all the links</li>
-<li>Crawl and scrape the website for images</li>
-</ul>
-</li>
-<li>
-<p>Attacks</p>
-<ul>
-<li>DDoS Attack</li>
-<li>ARP Spoofer</li>
-<li>DNS Spoofer</li>
-<li>De-authentication attack</li>
-<li>Network disassociation attack</li>
-<li>Ping of death</li>
-<li>MAC Flood attack</li>
-</ul>
-</li>
-<li>
-<p>Utilities</p>
-<ul>
-<li>Generate customized backdoor</li>
-<li>Data monitoring</li>
-<li>Keylogger</li>
-<li>SSH Tunelling</li>
-<li>Generate sitemap</li>
-<li>MAC address changer</li>
-<li>Trace route</li>
-</ul>
-</li>
-</ul>
-<h4 id="instalacion"><strong>Instalacion</strong></h4>
-<pre><code>git clone https://github.com/abhisharma404/vault.git
-cd vault/
-apt install python3-pip 
-pip3 install virtualenv
-virtualenv venv
-source venv/bin/activate 
-pip3 install -r requirements.txt 
-cd /vault/src
-</code></pre>
-
-  <br>
-    
-
-    
-    
-      
-    
-
- <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav">
-      <a href="../sandmap/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../sandmap/" class="btn btn-xs btn-link">
-        SANDMAP
-      </a>
-    </div>
-    
-  </div>-->
-
-    <br>
-</div>
 
 <footer class="col-md-12 wm-page-content">
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
