@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Dashboard - Documentacion Goizargi</title>
@@ -16,7 +11,7 @@
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/highlight.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -29,134 +24,122 @@
     <base target="_top">
     <script>
       var base_url = '../..';
-      var is_top_frame = false;
-        
-        var pageToc = [
-        ];
-
+      var is_top_frame = false;    
+      var pageToc = [
+      ];
     </script>
     <script src="../../js/base.js"></script>
-      <script src="../../search/main.js"></script> 
-</head>
+    <script src="../../search/main.js"></script> 
+  </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
-
-
-
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
+  <body>
+    <script>
+      if (is_top_frame) { $('body').addClass('wm-top-page'); }
+    </script>
     
-
-    
-    
-      
-    
-
+    <div class="container-fluid wm-page-content">
+      <a name="_top"></a>
   <!--<div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../pruebas_kubernetes/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../pruebas_kubernetes/" class="btn btn-xs btn-link">
+            Pruebas
+          </a>
+        </div>
     
-    <div class="wm-article-nav pull-right">
-      <a href="../pruebas_kubernetes/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../pruebas_kubernetes/" class="btn btn-xs btn-link">
-        Pruebas
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href="../comandos_kubernetes/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../comandos_kubernetes/" class="btn btn-xs btn-link">
-        Comandos
-      </a>
-    </div>
-    
-  </div>-->
+        <div class="wm-article-nav">
+          <a href="../comandos_kubernetes/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../comandos_kubernetes/" class="btn btn-xs btn-link">
+            Comandos
+          </a>
+        </div>
+      </div>-->
 
-    <h4 id="dashboard"><strong>Dashboard</strong></h4>
+      <h4 id="dashboard"><strong>Dashboard</strong></h4>
 
-    <ul>
-<li>
-<p>Instalar el dashboard</p>
-<pre><code>kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml
-</code></pre>
-</li>
-<li>
-<p>Crear un objeto a partir de un fichero YAML</p>
-<pre><code>kubectl create -f nombre_fichero.yaml
-</code></pre>
-</li>
-<li>
-<p>Crear una cuenta de servicio para el dashboard</p>
-<pre><code>kubectl create serviceaccount nombre_cuenta
-</code></pre>
-</li>
-<li>
-<p>Enlazar cluster</p>
-<pre><code>kubectl create clusterrolebinding nombre_cuenta --clusterrole=cluster-admin --serviceaccount=default:nombre_cuenta
-</code></pre>
-</li>
-<li>
-<p>Listar los secretos</p>
-<pre><code>kubectl get secrets
-</code></pre>
-</li>
-<li>
-<p>Visualizar el secreto de un usuario</p>
-<pre><code>kubectl describe secret nombre_secreto
-</code></pre>
-</li>
-<li>
-<p>Copiar el secreto, iniciar el dashboard, ir al <a href="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/">enlace para acceder</a> y pegar el token para iniciar sesion con el usuario creado</p>
-<ul>
-<li>Comando para iniciar el dashboard<pre><code>kubectl proxy
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<p><img alt="InkedCaptura_LI" src="https://user-images.githubusercontent.com/92585491/157859718-5623d43f-427a-478e-be2c-5062ada41bfb.jpg" /></p>
+      <ul>
+        <li>
+          <p>Instalar el dashboard</p>
+          <pre>
+            <code>kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml</code>
+          </pre>
+        </li>
+        <li>
+          <p>Crear un objeto a partir de un fichero YAML</p>
+          <pre>
+            <code>kubectl create -f nombre_fichero.yaml</code>
+          </pre>
+        </li>
+        <li>
+          <p>Crear una cuenta de servicio para el dashboard</p>
+          <pre>
+            <code>kubectl create serviceaccount nombre_cuenta</code>
+          </pre>
+        </li>
+        <li>
+          <p>Enlazar cluster</p>
+          <pre>
+            <code>kubectl create clusterrolebinding nombre_cuenta --clusterrole=cluster-admin --serviceaccount=default:nombre_cuenta</code>
+          </pre>
+        </li>
+        <li>
+          <p>Listar los secretos</p>
+          <pre>
+            <code>kubectl get secrets</code>
+          </pre>
+        </li>
+        <li>
+          <p>Visualizar el secreto de un usuario</p>
+          <pre>
+            <code>kubectl describe secret nombre_secreto</code>
+          </pre>
+        </li>
+        <li>
+          <p>Copiar el secreto, iniciar el dashboard, ir al <a href="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/">enlace para acceder</a> y pegar el token para iniciar sesion con el usuario creado</p>
+          <ul>
+            <li>Comando para iniciar el dashboard
+              <pre>
+                <code>kubectl proxy</code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+         <img alt="InkedCaptura_LI" src="https://user-images.githubusercontent.com/92585491/157859718-5623d43f-427a-478e-be2c-5062ada41bfb.jpg" />
+      </p>
 
-  <br>
-    
-
-    
-    
-      
-    
-
+      <br>
  <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../pruebas_kubernetes/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../pruebas_kubernetes/" class="btn btn-xs btn-link">
+            Pruebas
+          </a>
+        </div>
     
-    <div class="wm-article-nav pull-right">
-      <a href="../pruebas_kubernetes/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../pruebas_kubernetes/" class="btn btn-xs btn-link">
-        Pruebas
-      </a>
+        <div class="wm-article-nav">
+          <a href="../comandos_kubernetes/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../comandos_kubernetes/" class="btn btn-xs btn-link">
+            Comandos
+          </a>
+        </div>
+      </div>-->
+
+      <br>
     </div>
-    
-    <div class="wm-article-nav">
-      <a href="../comandos_kubernetes/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../comandos_kubernetes/" class="btn btn-xs btn-link">
-        Comandos
-      </a>
-    </div>
-    
-  </div>-->
 
-    <br>
-</div>
+    <footer class="col-md-12 wm-page-content">
+      <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+    </footer>
 
-<footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
-</footer>
-
-</body>
+   </body>
 </html>
