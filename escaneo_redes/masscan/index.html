@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>MASSCAN - Documentacion Goizargi</title>
@@ -21,127 +16,101 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../js/bootstrap-3.3.7.min.js"></script>
     <script src="../../js/highlight.pack.js"></script>
-    
     <base target="_top">
     <script>
       var base_url = '../..';
       var is_top_frame = false;
-        
-        var pageToc = [
-          {title: "MASSCAN", url: "#_top", children: [
-              {title: "Instalacion", url: "#instalacion" },
-              {title: "Ejemplo", url: "#ejemplo" },
-          ]},
-        ];
-
+      var pageToc = [
+        {title: "MASSCAN", url: "#_top", children: [
+            {title: "Instalacion", url: "#instalacion" },
+            {title: "Ejemplo", url: "#ejemplo" },
+        ]},
+      ];
     </script>
     <script src="../../js/base.js"></script>
-      <script src="../../search/main.js"></script> 
-</head>
+    <script src="../../search/main.js"></script> 
+  </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
-
-
-
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
-    
-
-    
-    
-      
-    
-
+  <body>
+    <script>
+      if (is_top_frame) { $('body').addClass('wm-top-page'); }
+    </script>
+    <div class="container-fluid wm-page-content">
+      <a name="_top"></a>
 <!--  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../sandmap/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../sandmap/" class="btn btn-xs btn-link">
+            SANDMAP
+          </a>
+        </div>
     
-    <div class="wm-article-nav pull-right">
-      <a href="../sandmap/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../sandmap/" class="btn btn-xs btn-link">
-        SANDMAP
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href="../scapy/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../scapy/" class="btn btn-xs btn-link">
-        SCAPY
-      </a>
-    </div>
-    
-  </div> -->
-
-    
-
-    <h3 id="masscan"><strong>MASSCAN</strong></h3>
-<p>Masscan produce resultados similares a <strong>Nmap</strong>, el escaner de puertos mas famoso. Internamente opera de manera 
-mas similar a <strong>scanrad</strong>, <strong>unicornscan</strong> y <strong>zmap</strong>. La principal diferencia es el hecho de ser mas veloz comparado 
-con estos otros escaners. Ademas de ser mas flexible, permitiendo rangos de direcciones y rangos de puertos 
-arbitrarios.</p>
-<p>No existen puertos por defecto a escanear, siempre se debe especificarlos. Y los hosts objetivos deben ser siempre 
-direcciones IP o rangos simples, no nombres de dominio.</p>
-<h4 id="instalacion"><strong>Instalacion</strong></h4>
-<pre><code>apt install git make gcc
-git clone https://github.com/robertdavidgraham/masscan
-cd masscan
-make
-make install
-</code></pre>
-<h4 id="ejemplo"><strong>Ejemplo</strong></h4>
-<pre><code>masscan -p 80,8000-8100 IP/subred
-</code></pre>
-<ul>
-<li>Escanea la IP/subred</li>
-<li>Escanea el puerto 80 y los puertos del rango 8000-8100, dentro de la IP/subred</li>
-<li>Para redirigir los resultados a un fichero, agregar "--echo &gt; nombre_fichero.extension" al final del comando</li>
-</ul>
-
-  <br>
-    
-
-    
-    
-      
-    
-
+        <div class="wm-article-nav">
+          <a href="../scapy/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../scapy/" class="btn btn-xs btn-link">
+            SCAPY
+          </a>
+        </div>
+      </div> -->
+      <h3 id="masscan"><strong>MASSCAN</strong></h3>
+      <p>Masscan produce resultados similares a <strong>Nmap</strong>, el escaner de puertos mas famoso. Internamente opera de manera 
+      mas similar a <strong>scanrad</strong>, <strong>unicornscan</strong> y <strong>zmap</strong>. La principal diferencia es el hecho de ser mas veloz comparado 
+      con estos otros escaners. Ademas de ser mas flexible, permitiendo rangos de direcciones y rangos de puertos 
+      arbitrarios.</p>
+      <p>No existen puertos por defecto a escanear, siempre se debe especificarlos. Y los hosts objetivos deben ser siempre 
+      direcciones IP o rangos simples, no nombres de dominio.</p>
+      <h4 id="instalacion"><strong>Instalacion</strong></h4>
+      <pre>
+        <code>
+          apt install git make gcc
+          git clone https://github.com/robertdavidgraham/masscan
+          cd masscan
+          make
+          make install
+        </code>
+      </pre>
+      <h4 id="ejemplo"><strong>Ejemplo</strong></h4>
+      <pre>
+        <code>masscan -p 80,8000-8100 IP/subred</code>
+      </pre>
+      <ul>
+        <li>Escanea la IP/subred</li>
+        <li>Escanea el puerto 80 y los puertos del rango 8000-8100, dentro de la IP/subred</li>
+        <li>Para redirigir los resultados a un fichero, agregar "--echo &gt; nombre_fichero.extension" al final del comando</li>
+      </ul>
+      <br>
  <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../sandmap/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../sandmap/" class="btn btn-xs btn-link">
+            SANDMAP
+          </a>
+        </div>
     
-    <div class="wm-article-nav pull-right">
-      <a href="../sandmap/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../sandmap/" class="btn btn-xs btn-link">
-        SANDMAP
-      </a>
+        <div class="wm-article-nav">
+          <a href="../scapy/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../scapy/" class="btn btn-xs btn-link">
+            SCAPY
+          </a>
+        </div>
+      </div>-->
+      <br>
     </div>
-    
-    <div class="wm-article-nav">
-      <a href="../scapy/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../scapy/" class="btn btn-xs btn-link">
-        SCAPY
-      </a>
-    </div>
-    
-  </div>-->
 
-    <br>
-</div>
+    <footer class="col-md-12 wm-page-content">
+      <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+    </footer>
 
-<footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
-</footer>
-
-</body>
+  </body>
 </html>
