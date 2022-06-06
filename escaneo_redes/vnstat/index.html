@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>VNSTAT - Documentacion Goizargi</title>
@@ -21,120 +16,92 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../js/bootstrap-3.3.7.min.js"></script>
     <script src="../../js/highlight.pack.js"></script>
-    
     <base target="_top">
     <script>
       var base_url = '../..';
       var is_top_frame = false;
-        
-        var pageToc = [
-          {title: "VNSTAT", url: "#_top", children: [
-              {title: "Instalacion", url: "#instalacion" },
-              {title: "Pruebas", url: "#pruebas" },
-          ]},
-        ];
-
+      var pageToc = [
+        {title: "VNSTAT", url: "#_top", children: [
+            {title: "Instalacion", url: "#instalacion" },
+            {title: "Pruebas", url: "#pruebas" },
+        ]},
+      ];
     </script>
     <script src="../../js/base.js"></script>
-      <script src="../../search/main.js"></script> 
-</head>
+    <script src="../../search/main.js"></script> 
+  </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
-
-
-
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
-    
-
-    
-    
-      
-    
-
+  <body>
+    <script>
+      if (is_top_frame) { $('body').addClass('wm-top-page'); }
+    </script>
+    <div class="container-fluid wm-page-content">
+      <a name="_top"></a>
  <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../iptraf/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../iptraf/" class="btn btn-xs btn-link">
+            IPTRAF
+          </a>
+        </div>
     
-    <div class="wm-article-nav pull-right">
-      <a href="../iptraf/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../iptraf/" class="btn btn-xs btn-link">
-        IPTRAF
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href="../iftop/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../iftop/" class="btn btn-xs btn-link">
-        IFTOP
-      </a>
-    </div>
-    
-  </div>-->
-
-    
-
-    <h3 id="vnstat"><strong>VNSTAT</strong></h3>
-<p>Vnstat es un monitor de red que viene incluido, por defecto, en la mayoria de las distribuciones de Linux, 
-pero en la distribucion de Debian no viene de forma predeterminada, por lo que tendremos que instalarla. 
-Este programa nos permite obtener un control en tiempo real sobre el trafico enviado y recibido en un periodo de 
-tiempo, elegido por el usuario.</p>
-<p>Tendremos la posibilidad de consultar una base de datos, mostrar horas, dias, meses, semanas, el top de los ultimos
-10 dias, actualizar la base de datos, calcular el trafico y muchas mas opciones disponibles.</p>
-<hr />
-<h4 id="instalacion"><strong>Instalacion</strong></h4>
-<pre><code>apt install vnstat
-</code></pre>
-<h4 id="pruebas"><strong>Pruebas</strong></h4>
-<p>Si ejecutamos <em>man vnstat</em> podremos ver el resto de opciones de configuracion que tenemos disponibles con este 
-programa, pudiendo exportar toda la informacion en formato <strong>XML</strong> e incluso <strong>JSON</strong>, ademas, tendremos la 
-posibilidad de mostrar las estadisticas de una interfaz o de varias conjuntamente.</p>
-
-  <br>
-    
-
-    
-    
-      
-    
-
+        <div class="wm-article-nav">
+          <a href="../iftop/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../iftop/" class="btn btn-xs btn-link">
+            IFTOP
+          </a>
+        </div>
+      </div>-->
+      <h3 id="vnstat"><strong>VNSTAT</strong></h3>
+      <p>Vnstat es un monitor de red que viene incluido, por defecto, en la mayoria de las distribuciones de Linux, 
+      pero en la distribucion de Debian no viene de forma predeterminada, por lo que tendremos que instalarla. 
+      Este programa nos permite obtener un control en tiempo real sobre el trafico enviado y recibido en un periodo de 
+      tiempo, elegido por el usuario.</p>
+      <p>Tendremos la posibilidad de consultar una base de datos, mostrar horas, dias, meses, semanas, el top de los ultimos
+      10 dias, actualizar la base de datos, calcular el trafico y muchas mas opciones disponibles.</p>
+      <hr />
+      <h4 id="instalacion"><strong>Instalacion</strong></h4>
+      <pre>
+        <code>apt install vnstat</code>
+       </pre>
+       <h4 id="pruebas"><strong>Pruebas</strong></h4>
+       <p>Si ejecutamos <em>man vnstat</em> podremos ver el resto de opciones de configuracion que tenemos disponibles con este 
+        programa, pudiendo exportar toda la informacion en formato <strong>XML</strong> e incluso <strong>JSON</strong>, ademas, tendremos la 
+        posibilidad de mostrar las estadisticas de una interfaz o de varias conjuntamente.</p>
+        <br>
   <!--<div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../iptraf/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../iptraf/" class="btn btn-xs btn-link">
+            IPTRAF
+          </a>
+        </div>
     
-    <div class="wm-article-nav pull-right">
-      <a href="../iptraf/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../iptraf/" class="btn btn-xs btn-link">
-        IPTRAF
-      </a>
+        <div class="wm-article-nav">
+          <a href="../iftop/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../iftop/" class="btn btn-xs btn-link">
+            IFTOP
+          </a>
+        </div>
+      </div>-->
+
+      <br>
     </div>
-    
-    <div class="wm-article-nav">
-      <a href="../iftop/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../iftop/" class="btn btn-xs btn-link">
-        IFTOP
-      </a>
-    </div>
-    
-  </div>-->
 
-    <br>
-</div>
+    <footer class="col-md-12 wm-page-content">
+      <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+    </footer>
 
-<footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
-</footer>
-
-</body>
+  </body>
 </html>
