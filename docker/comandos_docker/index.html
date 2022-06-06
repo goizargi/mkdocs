@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Comandos - Documentacion Goizargi</title>
@@ -21,152 +16,143 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../js/bootstrap-3.3.7.min.js"></script>
     <script src="../../js/highlight.pack.js"></script>
-    
     <base target="_top">
     <script>
       var base_url = '../..';
-      var is_top_frame = false;
-        
-        var pageToc = [
-          {title: "Comandos DOCKER", url: "#_top", children: [
-          ]},
-        ];
-
+      var is_top_frame = false; 
+      var pageToc = [
+        {title: "Comandos DOCKER", url: "#_top", children: [
+        ]},
+      ];
     </script>
     <script src="../../js/base.js"></script>
-      <script src="../../search/main.js"></script> 
-</head>
+    <script src="../../search/main.js"></script> 
+  </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
-
-
-
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
-    
-
-    
-    
-      
-    
-
+  <body>
+    <script>
+      if (is_top_frame) { $('body').addClass('wm-top-page'); }
+    </script>
+    <div class="container-fluid wm-page-content">
+      <a name="_top"></a>
   <!--<div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+        <div class="wm-article-nav pull-right">
+          <a href="../../ansible/info_ansible/" class="btn btn-xs btn-default pull-right">
+            Next
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <a href="../../ansible/info_ansible/" class="btn btn-xs btn-link">
+            Info
+          </a>
+        </div>
     
-    <div class="wm-article-nav pull-right">
-      <a href="../../ansible/info_ansible/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../../ansible/info_ansible/" class="btn btn-xs btn-link">
-        Info
-      </a>
-    </div>
+        <div class="wm-article-nav">
+          <a href="../dockerfile/" class="btn btn-xs btn-default pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            Previous</a><a href="../dockerfile/" class="btn btn-xs btn-link">
+            Dockerfile
+          </a>
+        </div> 
+      </div>-->
+      <h3 id="comandos-docker">Comandos DOCKER</h3>
+      <ul>
+        <li>
+          <p>Descargar una imagen</p>
+          <pre>
+            <code>docker pull Nombre_imagen</code>
+          </pre>
+        </li>
+        <li>
+          <p>Ver las imagenes descargadas</p>
+          <pre>
+            <code>docker images</code>
+          </pre>
+        </li>
+        <li>
+          <p>Ejecutar una imagen para crear un contenedor</p>
+            <pre>
+              <code>
+                docker run [opciones] nombre_imagen [comando] . . .        
+                docker run jenkins/jenkins:lts
+              </code>
+            </pre>
+          </li>
+          <li>
+            <p>Crear una imagen a partir de un dockerfile</p>
+            <pre>
+              <code>docker build [opciones] ruta nombre</code>
+            </pre>
+          </li>
+          <li>
+            <p>Ver lista de contenedores iniciados</p>
+            <pre>
+              <code>docker container ls</code>
+            </pre>
+          </li>
+          <li>
+            <p>Hacer una exportacion de imagen</p>
+            <pre>
+              <code>
+                docker export ID_CONTENEDOR &gt; nombre_archivo.tar
+                docker export 55e4472ac30d &gt; prueba.tar
+              </code>
+            </pre>
+          </li>
+          <li>
+            <p>Hacer una importacion de imagen desde el archivo .tar</p>
+            <pre>
+              <code>
+                docker import nombre_archivo.tar nombre_imagen_importada
+                docker import prueba.tar imagen_prueba
+              </code>
+            </pre>
+          </li>
+          <li>
+            <p>Crear un contenedor a partir de la imagen importada</p>
+            <pre>
+              <code>
+                docker run --name nombre_contenedor -ti [-p puerto] nombre_imagen_importada comando
+                docker run --name prueba1 -ti imagen_prueba sh
+              </code>
+            </pre>
+          </li>
+        </ul>
+        <p>
+          <img alt="importarExportar" src="https://user-images.githubusercontent.com/92585491/156369882-326ee1b6-9937-4ef5-b25c-c1e37f3dfea4.PNG" />
+        </p>
+        <p>
+          <img alt="iniciar_mkdocs_puerto" src="https://user-images.githubusercontent.com/92585491/156369897-38466ae5-aef3-4138-9cf6-d5dce7435865.PNG" />
+        </p>
+        <br>
+   <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+          <div class="wm-article-nav pull-right">
+            <a href="../../ansible/info_ansible/" class="btn btn-xs btn-default pull-right">
+              Next
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </a>
+            <a href="../../ansible/info_ansible/" class="btn btn-xs btn-link">
+              Info
+            </a>
+          </div>
     
-    <div class="wm-article-nav">
-      <a href="../dockerfile/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../dockerfile/" class="btn btn-xs btn-link">
-        Dockerfile
-      </a>
-    </div>
-    
-  </div>-->
+          <div class="wm-article-nav">
+            <a href="../dockerfile/" class="btn btn-xs btn-default pull-left">
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+              Previous</a><a href="../dockerfile/" class="btn btn-xs btn-link">
+              Dockerfile
+            </a>
+          </div>
+        </div> -->
 
-    
+        <br>
+      </div>
 
-    <h3 id="comandos-docker">Comandos DOCKER</h3>
-<ul>
-<li>
-<p>Descargar una imagen</p>
-<pre><code>docker pull Nombre_imagen
-</code></pre>
-</li>
-<li>
-<p>Ver las imagenes descargadas</p>
-<pre><code>docker images
-</code></pre>
-</li>
-<li>
-<p>Ejecutar una imagen para crear un contenedor</p>
-<pre><code>docker run [opciones] nombre_imagen [comando] . . .        
-docker run jenkins/jenkins:lts
-</code></pre>
-</li>
-<li>
-<p>Crear una imagen a partir de un dockerfile</p>
-<pre><code>docker build [opciones] ruta nombre
-</code></pre>
-</li>
-<li>
-<p>Ver lista de contenedores iniciados</p>
-<pre><code>docker container ls
-</code></pre>
-</li>
-<li>
-<p>Hacer una exportacion de imagen</p>
-<pre><code>docker export ID_CONTENEDOR &gt; nombre_archivo.tar
-docker export 55e4472ac30d &gt; prueba.tar
-</code></pre>
-</li>
-<li>
-<p>Hacer una importacion de imagen desde el archivo .tar</p>
-<pre><code>docker import nombre_archivo.tar nombre_imagen_importada
-docker import prueba.tar imagen_prueba
-</code></pre>
-</li>
-<li>
-<p>Crear un contenedor a partir de la imagen importada</p>
-<pre><code>docker run --name nombre_contenedor -ti [-p puerto] nombre_imagen_importada comando
-docker run --name prueba1 -ti imagen_prueba sh
-</code></pre>
-</li>
-</ul>
-<p><img alt="importarExportar" src="https://user-images.githubusercontent.com/92585491/156369882-326ee1b6-9937-4ef5-b25c-c1e37f3dfea4.PNG" /></p>
-<p><img alt="iniciar_mkdocs_puerto" src="https://user-images.githubusercontent.com/92585491/156369897-38466ae5-aef3-4138-9cf6-d5dce7435865.PNG" /></p>
+      <footer class="col-md-12 wm-page-content">
+        <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+      </footer>
 
-  <br>
-    
-
-    
-    
-      
-    
-
- <!-- <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../../ansible/info_ansible/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../../ansible/info_ansible/" class="btn btn-xs btn-link">
-        Info
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href="../dockerfile/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../dockerfile/" class="btn btn-xs btn-link">
-        Dockerfile
-      </a>
-    </div>
-    
-  </div> -->
-
-    <br>
-</div>
-
-<footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
-</footer>
-
-</body>
+   </body>
 </html>
