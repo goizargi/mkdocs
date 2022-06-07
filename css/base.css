@@ -351,12 +351,12 @@ margin: 1rem 0;
 }
 
 .wm-page-content img {
-max-width: 100%;
+max-width: 90%;
 display: inline-block;
 padding: 4px;
 line-height: 1.428571429;
 background-color: #21252B;
-border: 1px none black;
+border: 1px none white;
 border-radius: 4px;
 margin: 20px auto 30px auto;
 }
@@ -465,7 +465,7 @@ h2, h3, h4, h5, h6 {
 }
 
 hr {
-  border-top: 1px solid #aaa;
+  border-top: 3px solid #aaa;
 }
 
 pre, .rst-content tt {
