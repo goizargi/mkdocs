@@ -71,9 +71,7 @@
         <h4 id="crear-un-job"><strong>Crear un job</strong></h4>
         <ul>
           <li>Comando para crear un job:
-            <pre>
-              <code>kubectl create job nombre_job --image=nombre_imagen</code>
-            </pre>
+            <pre><code>kubectl create job nombre_job --image=nombre_imagen</code></pre>
           </li>
         </ul>
         <p>Ver el job creado en el dashboard:</p>
@@ -81,15 +79,11 @@
           <img alt="Captura2-1" src="https://user-images.githubusercontent.com/92585491/157858776-2d385db2-43c2-4d2b-8ea0-2deb059b5ecf.png" />
         </p>
         <h4 id="crear-un-deployment"><strong>Crear un deployment</strong></h4>
-        <pre>
-          <code>kubectl apply -f /ruta_fichero.yaml</code>
-        </pre>
+        <pre><code>kubectl apply -f /ruta_fichero.yaml</code></pre>
         <ul>
           <li>
             <p>Fichero YAML:</p>
-            <pre>
-              <code>
-                apiVersion: apps/v1
+            <pre><code>apiVersion: apps/v1
                 kind: Deployment
                 metadata:
                   name: nginx-deployment
@@ -109,42 +103,30 @@
                     - name: nginx
                       image: nginx:1.14.2
                       ports:
-                        - containerPort: 80
-              </code>
-            </pre>
+                        - containerPort: 80</code></pre>
           </li>
           <li>
             <p>Visualizar los deployments para comprobar que se ha creado</p>
-            <pre>
-              <code>kubectl get deployments</code>
-            </pre>
+            <pre><code>kubectl get deployments</code></pre>
           </li>
           <li>
             <p>Ver el set de replicas creado por el deployment</p>
-            <pre>
-              <code>kubectl get rs</code>
-            </pre>
+            <pre><code>kubectl get rs</code></pre>
           </li>
           <li>
             <p>Ver las etiquetas de cada replica</p>
-            <pre>
-              <code>kubectl get pods --show-labels</code>
-            </pre>
+            <pre><code>kubectl get pods --show-labels</code></pre>
           </li>
         </ul>
         <p>
           <img alt="prueba-deployment11" src="https://user-images.githubusercontent.com/92585491/158187872-d306cab7-8a9d-4f89-92ae-057f58abdc8b.png" />
         </p>
         <h4 id="actualizar-un-deployment"><strong>Actualizar un deployment</strong></h4>
-        <pre>
-          <code>kubectl set image deployment/nginx-deployment nginx=nginx:1.16.1</code>
-        </pre>
+        <pre><code>kubectl set image deployment/nginx-deployment nginx=nginx:1.16.1</code></pre>
         <p>
           <em>Alternativa</em>
         </p>
-        <pre>
-          <code>kubectl edit deployment/nginx-deployment</code>
-        </pre>
+        <pre><code>kubectl edit deployment/nginx-deployment</code></pre>
         <p>Cambiar en la seccion 
           <em>.spec.template.spec.containers[0].image</em> 
           la version <strong>nginx:1.14.2</strong> por 
@@ -153,15 +135,11 @@
         <ul>
           <li>
             <p>Ver que se ha creado otro set de replicas al actualizar el deployment</p>
-            <pre>
-              <code>kubectl get rs</code>
-            </pre>
+            <pre><code>kubectl get rs</code></pre>
           </li>
           <li>
             <p>Ver los detalles del deployment</p>
-            <pre>
-              <code>kubectl describe deployments</code>
-            </pre>
+            <pre><code>kubectl describe deployments</code></pre>
           </li>
         </ul>
         <p>
@@ -171,38 +149,26 @@
         <ol>
           <li>
             <p>Crear una actualizacion del deployment con errata</p>
-            <pre>
-              <code>kubectl set image deployment/nginx-deployment nginx=nginx:1.161</code>
-            </pre>
+            <pre><code>kubectl set image deployment/nginx-deployment nginx=nginx:1.161</code></pre>
           </li>
           <li>
             <p>Ver los pods</p>
-            <pre>
-              <code>kubectl get pods</code>
-            </pre>
+            <pre><code>kubectl get pods</code></pre>
             <p>
               <em>Aparece uno con un error de imagen</em>
             </p>
           </li>
           <li>
             <p>Ver el historial de versiones del deployment</p>
-            <pre>
-              <code>kubectl rollout history deployment/nginx-deployment</code>
-            </pre>
+            <pre><code>kubectl rollout history deployment/nginx-deployment</code></pre>
             <p>Para ver mas info de cada revision:</p>
-            <pre>
-              <code>kubectl rollout history deployment/nginx-deployment --revision=numero_revision</code>
-            </pre>
+            <pre><code>kubectl rollout history deployment/nginx-deployment --revision=numero_revision</code></pre>
           </li>
           <li>
             <p>Volver a la version anterior</p>
-            <pre>
-              <code>kubectl rollout undo deployment/nginx-deployment</code>
-            </pre>
+            <pre><code>kubectl rollout undo deployment/nginx-deployment</code></pre>
             <p>4.1. Volver a una version especifica</p>
-            <pre>
-              <code>kubectl rollout undo deployment/nginx-deployment --to-revision=numero_revision</code>
-            </pre>
+            <pre><code>kubectl rollout undo deployment/nginx-deployment --to-revision=numero_revision</code></pre>
           </li>
         </ol>
         <p>
@@ -215,27 +181,19 @@
           <img alt="prueba-deployment5" src="https://user-images.githubusercontent.com/92585491/158186739-ec1d47bf-c3dd-4b4b-b637-c5ebc30abd2a.PNG" />
         </p>
         <h4 id="escalar-un-deployment"><strong>Escalar un deployment</strong></h4>
-        <pre>
-          <code> kubectl scale deployment/nginx-deployment --replicas=10</code>
-        </pre>
+        <pre><code> kubectl scale deployment/nginx-deployment --replicas=10</code></pre>
         <ol>
           <li>
             <p>Comprobar que las replicas estan funcionando</p>
-            <pre>
-              <code>kubectl get deploy</code>
-            </pre>
+            <pre><code>kubectl get deploy</code></pre>
           </li>
           <li>
             <p>Actualizar a una imagen no existente</p>
-            <pre>
-              <code>kubectl set image deployment/nginx-deployment nginx=nginx:nombre_falso</code>
-            </pre>
+            <pre><code>kubectl set image deployment/nginx-deployment nginx=nginx:nombre_falso</code></pre>
           </li>
           <li>
             <p>Ver el nuevo set de replicas</p>
-            <pre>
-              <code>kubectl get rs</code>
-            </pre>
+            <pre><code>kubectl get rs</code></pre>
           </li>
         </ol>
         <p>
@@ -245,24 +203,16 @@
         <ol>
           <li>
             <p>Crear un Dockerfile de php + apache</p>
-            <pre>
-              <code>
-                FROM php:5-apache
+            <pre><code>FROM php:5-apache
                 COPY index.php /var/www/html/index.php
-                RUN chmod a+rx index.php
-              </code>
-            </pre>
+                RUN chmod a+rx index.php</code></pre>
           </li>
           <li>
             <p>Crear un deployment </p>
-            <pre>
-              <code>kubectl apply -f /ruta_fichero.yaml</code>
-            </pre>
+            <pre><code>kubectl apply -f /ruta_fichero.yaml</code></pre>
             <ul>
               <li>Fichero YAML
-                <pre>
-                  <code>
-                    apiVersion: apps/v1
+                <pre><code>apiVersion: apps/v1
                     kind: Deployment
                     metadata:
                       name: php-apache
@@ -297,63 +247,45 @@
                       ports:
                       - port: 80
                       selector:
-                        run: php-apache
-                  </code>
-                </pre>
+                        run: php-apache</code></pre>
               </li>
             </ul>
           </li>
           <li>
             <p>Crear el escalado horizontal automatico</p>
-            <pre>
-              <code>kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10</code>
-            </pre>
+            <pre><code>kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10</code></pre>
           </li>
           <li>
             <p>Agregar <strong>metrics-server</strong></p>
-            <pre>
-              <code>kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.4.1/components.yaml</code>
-            </pre>
+            <pre><code>kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.4.1/components.yaml</code></pre>
             <ul>
               <li>Editar el fichero de metrics-server
-                <pre>
-                  <code>kubectl edit deployments.apps -n kube-system metrics-server</code>
-                </pre>
+                <pre><code>kubectl edit deployments.apps -n kube-system metrics-server</code></pre>
                 <hr />
-                <pre>
-                  <code>
-                    spec:
+                <pre><code>spec:
                     containers:
                     - args:
                       - --cert-dir=/tmp
                       - --secure-port=4443
                       - --kubelet-insecure-tls=true
-                      - --kubelet-preferred-address-types=InternalIP
-                  </code>
-                </pre>
+                      - --kubelet-preferred-address-types=InternalIP</code></pre>
               </li>
             </ul>
           </li>
           <li>
             <p>Ver el estado del HPA (HorizontalPodAutoscaler)</p>
-            <pre>
-              <code>kubectl get hpa</code>
-            </pre>
+            <pre><code>kubectl get hpa</code></pre>
           </li>
           <li>
             <p>Aumentar la carga</p>
             <ul>
               <li>
                 <p>En otra ventana de PowerShell</p>
-                <pre>
-                  <code>kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh  -c "while sleep 0.01; do wget -q -O- http://php-apache; done"</code>
-                </pre>
+                <pre><code>kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh  -c "while sleep 0.01; do wget -q -O- http://php-apache; done"</code></pre>
               </li>
               <li>
                 <p>Ver los cambios en la carga de CPU (Actualiza cada 1 minuto)</p>
-                <pre>
-                  <code>kubectl get hpa php-apache --watch</code>
-                </pre>
+                <pre><code>kubectl get hpa php-apache --watch</code></pre>
               </li>
             </ul>
           </li>
@@ -393,7 +325,8 @@
       </div>
 
     <footer class="col-md-12 wm-page-content">
-      <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+  <!--<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>-->
+      <p>Documentacion Goizargi Llona - Grado superior ASI 2º Dual</p>
     </footer>
 
   </body>
