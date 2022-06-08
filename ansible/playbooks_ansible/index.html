@@ -60,21 +60,13 @@
       </div> -->
       <h3 id="playbooks">PLAYBOOKs</h3>
       <p>Ejecutar un playbook:</p>
-      <pre>
-        <code>ansible-playbook NombrePlaybook.yml</code>
-      </pre>
+      <pre><code>ansible-playbook NombrePlaybook.yml</code></pre>
       <p><em><strong>En caso de dar fallo:</strong> Comprobar que SSH esta instalado y funcionando. Para instalarlo e iniciarlo:</em></p>
-      <pre>
-        <code>
-          yum install openssh-server openssh-client
-          service ssh start
-        </code>
-      </pre>
+      <pre><code>yum install openssh-server openssh-client
+          service ssh start</code></pre>
       <ul>
         <li>Comprobar que tenemos privilegios. En caso de no tenerlos, ejecutar en la terminal del equipo real:
-          <pre>
-            <code>docker run -d --name nommbreContenedor -it --privileged {ID de la imagen} /usr/sbin/init</code>
-          </pre>
+          <pre><code>docker run -d --name nommbreContenedor -it --privileged {ID de la imagen} /usr/sbin/init</code></pre>
         </li>
       </ul>
       <br>
