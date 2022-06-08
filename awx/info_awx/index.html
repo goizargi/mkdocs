@@ -68,34 +68,24 @@
       <ol>
         <li>
           <p>Actualizar el sistema e instalar Ansible</p>
-          <pre>
-            <code>
-              sudo apt update
+          <pre><code>sudo apt update
               sudo apt upgrade
-              sudo apt install ansible
-            </code>
-        </pre>
+              sudo apt install ansible</code></pre>
       </li>
       <li>
       <p>Instalar Docker y Docker Compose</p>
       <ul>
         <li>
           <p>Docker:</p>
-          <pre>
-            <code>
-              sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg-agent
+          <pre><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg-agent
               curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
               sudo apt update
               sudo apt install docker-ce
-              sudo /etc/init.d/docker start
-            </code>
-          </pre>
+              sudo /etc/init.d/docker start</code></pre>
         </li>
         <li>
           <p>Docker Compose:</p>
-          <pre>
-            <code>sudo apt install docker-compose</code>
-          </pre>
+          <pre><code>sudo apt install docker-compose</code></pre>
         </li>
       </ul>
     </li>
@@ -104,15 +94,11 @@
       <ul>
         <li>
           <p>Node:</p>
-          <pre>
-            <code>sudo apt install nodejs npm</code>
-          </pre>
+          <pre><code>sudo apt install nodejs npm</code></pre>
         </li>
         <li>
           <p>NPM:</p>
-          <pre>
-            <code>sudo npm install npm --global</code>
-          </pre>
+          <pre><code>sudo npm install npm --global</code></pre>
         </li>
       </ul>
     </li>
@@ -121,33 +107,21 @@
       <ul>
         <li>
           <p>Instalar  el modulo <strong>docker-py python</strong></p>
-          <pre>
-            <code>sudo apt install python3-pip git pwgen vim</code>
-          </pre>
+          <pre><code>sudo apt install python3-pip git pwgen vim</code></pre>
         </li>
         <li>
           <p>Descargar el fichero AWX desde <strong>GitHub</strong> y descomprimirlo</p>
-          <pre>
-            <code>
-              wget https://github.com/ansible/awx/archive/17.1.0.zip
-              unzip 17.1.0.zip
-            </code>
-          </pre>
+          <pre><code>wget https://github.com/ansible/awx/archive/17.1.0.zip
+              unzip 17.1.0.zip</code></pre>
         </li>
         <li>
           <p>Ir a la carpeta <em>awx/installer</em> y generar una key secreta</p>
-          <pre>
-            <code>
-              cd awx-17.1.0/installer/
-              pwgen -N 1 -s 30
-            </code>
-           </pre>
+          <pre><code>cd awx-17.1.0/installer/
+              pwgen -N 1 -s 30</code></pre>
           </li>
           <li>
             <p>Editar el fichero <em>inventory</em> con lo siguiente: </p>
-            <pre>
-              <code>
-                sudo nano inventory
+            <pre><code>sudo nano inventory
                 dockerhub_base=ansible 
                 awx_task_hostname=awx 
                 awx_web_hostname=awxweb 
@@ -162,23 +136,17 @@
                 admin_user=admin 
                 admin_password=password 
                 create_preload_data=True 
-                secret_key=&lt;clave_secreta&gt;
-              </code>
-            </pre>
+                secret_key=&lt;clave_secreta&gt;</code></pre>
           </li>
           <li>
             <p>Ejecutar el playbook <em>install.yml</em></p>
-            <pre>
-              <code>ansible-playbook -i inventory install.yml</code>
-            </pre>
+            <pre><code>ansible-playbook -i inventory install.yml</code></pre>
           </li>
         </ul>
       </li>
       <li>
         <p>Comprobar los contenedores</p>
-        <pre>
-          <code>docker ps</code>
-        </pre>
+        <pre><code>docker ps</code></pre>
       </li>
       <li>
         <p>Acceder a la web: <strong><em>http://IP_MAQUINA</em></strong></p>
