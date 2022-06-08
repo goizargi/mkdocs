@@ -80,27 +80,19 @@
         </li>
         <li>
           <p>Autorizar el agregar un nuevo usuario en <strong>kubeconf</strong></p>
-          <pre>
-            <code>kubectl config set-credentials NAME [--client-certificate=ruta_certificado] [--client-key=ruta_keyfile] [--token=bearer_token] [--username=nombre_usuario] [--password=contrasena]</code>
-          </pre>
+          <pre><code>kubectl config set-credentials NAME [--client-certificate=ruta_certificado] [--client-key=ruta_keyfile] [--token=bearer_token] [--username=nombre_usuario] [--password=contrasena]</code></pre>
         </li>
         <li>
           <p>Configurar la autenticacion basica para "cluster-admin"</p>
-            <pre>
-              <code>kubectl config set-credentials cluster-admin --username=[nombre_usuario]  --password=[contrasena_usuario]</code>
-            </pre>
+            <pre><code>kubectl config set-credentials cluster-admin --username=[nombre_usuario]  --password=[contrasena_usuario]</code></pre>
         </li>
         <li>
           <p>Lanzar el dashboard </p>
-          <pre>
-            <code>kubectl proxy</code>
-          </pre>
+          <pre><code>kubectl proxy</code></pre>
         </li>
         <li>
           <p>Visualizar el token para iniciar sesion en el dashboard</p>
-          <pre>
-            <code>kubectl -n kubernetes-dashboard describe secret</code>
-          </pre>
+          <pre><code>kubectl -n kubernetes-dashboard describe secret</code></pre>
         </li>
       </ul>
 
@@ -109,52 +101,36 @@
       <ul>
         <li>
           <p>Crear recursos definidos a traves de archivos <strong>.yaml</strong> ,<strong>.yml</strong> y <strong>.json</strong></p>
-          <pre>
-            <code>kubectl apply -f [archivo.extension]</code>
-          </pre>
+          <pre><code>kubectl apply -f [archivo.extension]</code></pre>
         </li>
         <li>
           <p>Para varios archivos</p>
-          <pre>
-            <code>kubectl apply -f [archivo1.extension] [archivo2.extension]</code>
-          </pre>
+          <pre><code>kubectl apply -f [archivo1.extension] [archivo2.extension]</code></pre>
         </li>
         <li>
           <p>Crear un recurso en todos los archivos del directorio</p>
-          <pre>
-            <code>kubectl apply -f ./dir</code>
-          </pre>
+          <pre><code>kubectl apply -f ./dir</code></pre>
         </li>
         <li>
           <p>Crear recursos desde una URL</p>
-          <pre>
-            <code>kubectl apply -f [URL]</code>
-          </pre>
+          <pre><code>kubectl apply -f [URL]</code></pre>
         </li>
         <li>
             <p>Crear un recurso desde el nombre de la imagen del repositorio</p>
-            <pre>
-              <code>kubectl create deployment [deployment-name] --image=[image-name]</code>
-            </pre>
+            <pre><code>kubectl create deployment [deployment-name] --image=[image-name]</code></pre>
             <ul>
               <li>Ejemplo:
-                <pre>
-                  <code>kubectl create deployment nginx --image=nginx</code>
-                </pre>
+                <pre><code>kubectl create deployment nginx --image=nginx</code></pre>
               </li>
             </ul>
         </li>
         <li>
           <p>Borrar recursos</p>
-          <pre>
-            <code>kubectl delete -f ./archivo.extension</code>
-          </pre>
+          <pre><code>kubectl delete -f ./archivo.extension</code></pre>
         </li>
         <li>
           <p>Borrar un pod</p>
-          <pre>
-            <code>kubectl delete pod nombre_pod</code>
-          </pre>
+          <pre><code>kubectl delete pod nombre_pod</code></pre>
         </li>
       </ul>
 
@@ -162,39 +138,27 @@
       <ul>
         <li>
           <p>Ejecutar un pod</p>
-          <pre>
-            <code>kubectl run -i --tty nombre --image=[nombre_imagen] -- sh</code>
-          </pre>
+          <pre><code>kubectl run -i --tty nombre --image=[nombre_imagen] -- sh</code></pre>
         </li>
         <li>
           <p>Verificar que un contenedor del pod se esta ejecutando, y ademas, visualizar los cambios en dicho pod</p>
-          <pre>
-            <code>kubectl get pod nombre_pod --watch</code>
-          </pre>
+          <pre><code>kubectl get pod nombre_pod --watch</code></pre>
         </li>
         <li>
           <p>Abrir una sesion interactiva dentro del contenedor en ejecucion</p>
-          <pre>
-            <code>kubectl exec -it nombre_contenedor -- /bin/bash</code>
-          </pre>
+          <pre><code>kubectl exec -it nombre_contenedor -- /bin/bash</code></pre>
         </li>
         <li>
           <p>Adjuntar un pod a un contenedor</p>
-          <pre>
-            <code>kubectl attach [nombre_pod] -i</code>
-          </pre>
+          <pre><code>kubectl attach [nombre_pod] -i</code></pre>
         </li>
         <li>
           <p>Reenvio de puertos para un pod</p>
-          <pre>
-            <code>kubectl port-forward [nombre_pod] [puerto_maquina_local]:[puerto_pod]</code>
-          </pre>
+          <pre><code>kubectl port-forward [nombre_pod] [puerto_maquina_local]:[puerto_pod]</code></pre>
         </li>
         <li>
           <p>Ver IP de un pod</p>
-          <pre>
-            <code>kubectl get -o template pod nombre_pod --template={{.status.podIP}}</code>
-          </pre>
+          <pre><code>kubectl get -o template pod nombre_pod --template={{.status.podIP}}</code></pre>
         </li>
       </ul>
 
@@ -223,7 +187,8 @@
     </div>
 
     <footer class="col-md-12 wm-page-content">
-      <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+  <!--<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>-->
+      <p>Documentacion Goizargi Llona - Grado superior ASI 2º Dual</p>
     </footer>
 
   </body>
