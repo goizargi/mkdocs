@@ -64,47 +64,33 @@
       <ul>
         <li>
           <p>Instalar el dashboard</p>
-          <pre>
-            <code>kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml</code>
-          </pre>
+          <pre><code>kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml</code></pre>
         </li>
         <li>
           <p>Crear un objeto a partir de un fichero YAML</p>
-          <pre>
-            <code>kubectl create -f nombre_fichero.yaml</code>
-          </pre>
+          <pre><code>kubectl create -f nombre_fichero.yaml</code></pre>
         </li>
         <li>
           <p>Crear una cuenta de servicio para el dashboard</p>
-          <pre>
-            <code>kubectl create serviceaccount nombre_cuenta</code>
-          </pre>
+          <pre><code>kubectl create serviceaccount nombre_cuenta</code></pre>
         </li>
         <li>
           <p>Enlazar cluster</p>
-          <pre>
-            <code>kubectl create clusterrolebinding nombre_cuenta --clusterrole=cluster-admin --serviceaccount=default:nombre_cuenta</code>
-          </pre>
+          <pre><code>kubectl create clusterrolebinding nombre_cuenta --clusterrole=cluster-admin --serviceaccount=default:nombre_cuenta</code></pre>
         </li>
         <li>
           <p>Listar los secretos</p>
-          <pre>
-            <code>kubectl get secrets</code>
-          </pre>
+          <pre><code>kubectl get secrets</code></pre>
         </li>
         <li>
           <p>Visualizar el secreto de un usuario</p>
-          <pre>
-            <code>kubectl describe secret nombre_secreto</code>
-          </pre>
+          <pre><code>kubectl describe secret nombre_secreto</code></pre>
         </li>
         <li>
           <p>Copiar el secreto, iniciar el dashboard, ir al <a href="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/">enlace para acceder</a> y pegar el token para iniciar sesion con el usuario creado</p>
           <ul>
             <li>Comando para iniciar el dashboard
-              <pre>
-                <code>kubectl proxy</code>
-              </pre>
+              <pre><code>kubectl proxy</code></pre>
             </li>
           </ul>
         </li>
@@ -138,7 +124,8 @@
     </div>
 
     <footer class="col-md-12 wm-page-content">
-      <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+  <!--<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>-->
+      <p>Documentacion Goizargi Llona - Grado superior ASI 2º Dual</p>
     </footer>
 
    </body>
