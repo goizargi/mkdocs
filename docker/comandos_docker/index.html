@@ -61,63 +61,39 @@
       <ul>
         <li>
           <p>Descargar una imagen</p>
-          <pre>
-            <code>docker pull Nombre_imagen</code>
-          </pre>
+          <pre><code>docker pull Nombre_imagen</code></pre>
         </li>
         <li>
           <p>Ver las imagenes descargadas</p>
-          <pre>
-            <code>docker images</code>
-          </pre>
+          <pre><code>docker images</code></pre>
         </li>
         <li>
           <p>Ejecutar una imagen para crear un contenedor</p>
-            <pre>
-              <code>
-                docker run [opciones] nombre_imagen [comando] . . .        
-                docker run jenkins/jenkins:lts
-              </code>
-            </pre>
+            <pre><code>docker run [opciones] nombre_imagen [comando] . . .        
+                docker run jenkins/jenkins:lts</code></pre>
           </li>
           <li>
             <p>Crear una imagen a partir de un dockerfile</p>
-            <pre>
-              <code>docker build [opciones] ruta nombre</code>
-            </pre>
+            <pre><code>docker build [opciones] ruta nombre</code></pre>
           </li>
           <li>
             <p>Ver lista de contenedores iniciados</p>
-            <pre>
-              <code>docker container ls</code>
-            </pre>
+            <pre><code>docker container ls</code></pre>
           </li>
           <li>
             <p>Hacer una exportacion de imagen</p>
-            <pre>
-              <code>
-                docker export ID_CONTENEDOR &gt; nombre_archivo.tar
-                docker export 55e4472ac30d &gt; prueba.tar
-              </code>
-            </pre>
+            <pre><code>docker export ID_CONTENEDOR &gt; nombre_archivo.tar
+                docker export 55e4472ac30d &gt; prueba.tar</code></pre>
           </li>
           <li>
             <p>Hacer una importacion de imagen desde el archivo .tar</p>
-            <pre>
-              <code>
-                docker import nombre_archivo.tar nombre_imagen_importada
-                docker import prueba.tar imagen_prueba
-              </code>
-            </pre>
+            <pre><code>docker import nombre_archivo.tar nombre_imagen_importada
+                docker import prueba.tar imagen_prueba</code></pre>
           </li>
           <li>
             <p>Crear un contenedor a partir de la imagen importada</p>
-            <pre>
-              <code>
-                docker run --name nombre_contenedor -ti [-p puerto] nombre_imagen_importada comando
-                docker run --name prueba1 -ti imagen_prueba sh
-              </code>
-            </pre>
+            <pre><code>docker run --name nombre_contenedor -ti [-p puerto] nombre_imagen_importada comando
+                docker run --name prueba1 -ti imagen_prueba sh</code></pre>
           </li>
         </ul>
         <p>
