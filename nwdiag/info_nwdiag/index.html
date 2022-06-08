@@ -78,23 +78,17 @@
       <ol>
         <li>
           <p>Definir una red</p>
-          <pre>
-            <code>
-              @startuml
+          <pre><code>@startuml
               nwdiag {
                  network dmz {
                      address = "210.x.x.x/24"
                  }
               }
-              @enduml
-            </code>
-          </pre>
+              @enduml</code></pre>
         </li>
         <li>
           <p>Definir elementos/servidores en una red</p>
-          <pre>
-            <code>
-              @startuml
+          <pre><code>@startuml
               nwdiag {
                 network dmz {
                     address = "210.x.x.x/24"
@@ -103,18 +97,14 @@
                     web02 [address = "210.x.x.2"];
                 }
               }
-              @enduml
-            </code>
-          </pre>
+              @enduml</code></pre>
           <p>
             <img alt="1" src="https://drive.google.com/uc?export=view&amp;id=1iYd3dLEl362d9FJOZxRrwkn4g_M2z_ff" />
           </p>
         </li>
         <li>
           <p>Ejemplo completo</p>
-          <pre>
-            <code>
-              @startuml
+          <pre><code>@startuml
               nwdiag {
               network dmz {
                   address = "210.x.x.x/24"
@@ -131,18 +121,14 @@
                   db02;
               }
             }
-            @enduml
-          </code>
-        </pre>
+            @enduml</code></pre>
         <p>
           <img alt="2" src="https://drive.google.com/uc?export=view&amp;id=1V84Q1385h1vfqUltpZ9iRN4OUdijiey5" />
         </p>
        </li>
       </ol>
       <h4 id="2-definir-multiples-direcciones">2. Definir multiples direcciones</h4>
-      <pre>
-        <code> 
-          @startuml
+      <pre><code>@startuml
            nwdiag {
              network dmz {
                  address = "210.x.x.x/24"
@@ -158,9 +144,7 @@
                  db02;
              }
            }
-           @enduml
-        </code>
-      </pre>
+           @enduml</code></pre>
       <p>
         <img alt="3" src="https://drive.google.com/uc?export=view&amp;id=1-2V-OvZXraCJclNGCM2E5qlO8J6QUtyF" />
       </p>
@@ -168,9 +152,7 @@
       <ol>
         <li>
           <p>Definir un grupo dentro de las definiciones de red</p>
-          <pre>
-            <code>
-              @startuml
+          <pre><code>@startuml
               nwdiag {
                 network Sample_front {
                    address = "192.168.10.0/24";
@@ -195,18 +177,14 @@
                    }
                 }
               }
-              @enduml
-            </code>
-          </pre>
+              @enduml</code></pre>
           <p>
             <img alt="4" src="https://drive.google.com/uc?export=view&amp;id=1-3rMTElxN2xGahhFxqAEsFvSImm6LWmc" />
           </p>
         </li>
         <li>
         <p>Definir un grupo fuera de las definiciones de red</p>
-        <pre>
-          <code>
-            @startuml
+        <pre><code>@startuml
             nwdiag {
               // definir el grupo fuera de las definiones de red
               group {
@@ -228,9 +206,7 @@
                 db02;
               }
             }
-            @enduml
-          </code>
-        </pre>
+            @enduml</code></pre>
         <p>
           <img alt="5" src="https://drive.google.com/uc?export=view&amp;id=1-9jT-ah1MBJs2ktmXMnwLggHgEgB66hG" />
         </p>
@@ -238,9 +214,7 @@
       <li>
         <p>Definir varios grupos en la misma red</p>
         <p>3.1. Ejemplo con 2 grupos</p>
-        <pre>
-          <code>
-            @startuml
+        <pre><code>@startuml
             nwdiag {
               group {
                 color = "#FFaaaa";
@@ -267,16 +241,12 @@
                   db02 ;
               }
              }
-            @enduml
-          </code>
-        </pre>
+            @enduml</code></pre>
         <p>
           <img alt="6" src="https://drive.google.com/uc?export=view&amp;id=1-ACA3e8XcFLGb9PT-b1aJE-aaGXR0xRq" />
         </p>
         <p>3.2. Ejemplo con 3 grupos</p>
-        <pre>
-          <code>
-            @startuml
+        <pre><code>@startuml
             nwdiag {
               group {
                  color = "#FFaaaa";
@@ -308,9 +278,7 @@
                   db03;
               }
             }
-            @enduml
-          </code>
-        </pre>
+            @enduml</code></pre>
         <p>
           <img alt="7" src="https://drive.google.com/uc?export=view&amp;id=1-E_Yiu618BzogEr5O_RAN1XQNVImnLXY" />
         </p>
@@ -320,9 +288,7 @@
     <ol>
       <li>
         <p>Redes - Se pueden agregar varias direcciones, color, descripcion, forma</p>
-          <pre>
-            <code>
-              @startuml
+          <pre><code>@startuml
               nwdiag {
                 network Sample_front {
                   address = "192.168.10.0/24"
@@ -349,18 +315,14 @@
                    }
                 }
               }
-              @enduml
-            </code>
-          </pre>
+              @enduml</code></pre>
           <p>
             <img alt="8" src="https://drive.google.com/uc?export=view&amp;id=1-PIfoGapOLImaQE5AsRk9f7Q_wAomkcT" />
           </p>
         </li>
         <li>
         <p>Grupo - Se puede agregar/cambiar color y descripcion</p>
-        <pre>
-          <code>
-            @startuml
+        <pre><code>@startuml
             nwdiag {
               group {
                 color = "#CCFFCC";
@@ -381,9 +343,7 @@
                   db01 [address = ".101", shape = database];
               }
             }
-            @enduml
-          </code>
-        </pre>
+            @enduml</code></pre>
         <p>
           <img alt="9" src="https://drive.google.com/uc?export=view&amp;id=1-YnCldRTIhPBlahxcoHK8Ui3g-5tdJwL" />
         </p>
@@ -392,9 +352,7 @@
     <h4 id="5-sprites">5. Sprites</h4>
     <p><em>Se pueden usar todos los sprites de la <strong><a href="https://plantuml.com/es/stdlib">Libreria Estandar</a></strong> o cualquier otra libreria</em></p>
     <p>Usa <em>"&lt;$sprite&gt;"</em> para usar un sprite y <em>\n</em> para una nueva linea</p>
-    <pre>
-      <code>
-        @startuml
+    <pre><code>@startuml
         !include &lt;office/Servers/application_server&gt;
         !include &lt;office/Servers/database_server&gt;
 
@@ -415,16 +373,12 @@
              db02 [address = "172.x.x.101",  description = "&lt;$database_server&gt;\n db02"];
           }
         }
-        @enduml
-      </code>
-    </pre>
+        @enduml</code></pre>
     <p><img alt="10" src="https://drive.google.com/uc?export=view&amp;id=1-d-rzaQuZ_pd4_5B62r-qV-7pNJDoMgQ" /></p>
     <h4 id="6-iconos">6. Iconos</h4>
     <p>Tambien se pueden usar iconos de <a href="https://plantuml.com/es/openiconic">OpenIconic</a> en la descripcion de un red o grupo.</p>
     <p>Usa <em>"&lt;$icon&gt;"</em> para crear un icono, <em>"&lt;$icon * n&gt;"</em> para multiplicar el tamano por el factor "n" y <em>"&lt;\n&gt;"</em> para una nueva linea.</p>
-    <pre>
-      <code>
-        @startuml
+    <pre><code>@startuml
         nwdiag {
           group nightly {
             color = "#FFAAAA";
@@ -450,16 +404,12 @@
                 ptr  [address = "172.x.x.110",  description = "&lt;&amp;print*4&gt;\n ptr01"];
              }
         }
-        @enduml
-      </code>
-    </pre>
+        @enduml</code></pre>
     <p>
       <img alt="11" src="https://drive.google.com/uc?export=view&amp;id=1-d220GWfBLN3f8y1qzTcI7L5wQPp0cMD" />
     </p>
     <h4 id="7-mismos-nodos-en-mas-de-dos-redes">7. Mismos nodos en mas de dos redes</h4>
-    <pre>
-      <code>
-        @startuml
+    <pre><code>@startuml
         nwdiag {
           // definir el grupo fuera de la definicion de la red
           group {
@@ -492,17 +442,13 @@
           }
 
         }
-        @enduml
-      </code>
-    </pre>
+        @enduml</code></pre>
     <p>
       <img alt="12" src="https://drive.google.com/uc?export=view&amp;id=1-gcjKMtqMEAUc-V319592R7qrZXTUdVJ" />
     </p>
     <h4 id="8-redes-pares-peer-networks">8. Redes pares (Peer Networks)</h4>
     <p>Las redes pares son simples conexiones entre dos nodos, en las que no se usa la red "busbar" horizontal.</p>
-    <pre>
-      <code>
-        @startuml
+    <pre><code>@startuml
         nwdiag {
           inet [shape = cloud];
           inet -- router;
@@ -513,9 +459,7 @@
              web02;
           }
         }
-        @enduml
-      </code>
-    </pre>
+        @enduml</code></pre>
     <p>
       <img alt="13" src="https://drive.google.com/uc?export=view&amp;id=1-hGhQ0Q-jWOR_1wAJH234NQDZkiig7Hz" />
     </p>
@@ -523,9 +467,7 @@
       <ol>
       <li>
       <p>Sin grupo</p>
-      <pre>
-        <code>
-          @startuml
+      <pre><code>@startuml
           nwdiag {
               internet [ shape = cloud];
               internet -- router;
@@ -539,18 +481,14 @@
                   db;
               }
           }
-          @enduml
-        </code>
-      </pre>
+          @enduml</code></pre>
       <p>
         <img alt="14" src="https://drive.google.com/uc?export=view&amp;id=1-mNsmLWasavI-8NUzR4PIPJdU1hAiSTs" />
       </p>
     </li>
     <li>
       <p>Con un grupo primero</p>
-      <pre>
-        <code>
-          @startuml
+      <pre><code>@startuml
           nwdiag {
               internet [ shape = cloud];
               internet -- router;
@@ -571,18 +509,14 @@
                   db;
               }
           }
-          @enduml
-        </code>
-      </pre>
+          @enduml</code></pre>
       <p>
         <img alt="15" src="https://drive.google.com/uc?export=view&amp;id=1-sGJki6yFkmQn_LHHZdaTHv76dzIl_gz" />
       </p>
     </li>
     <li>
       <p>Con un grupo segundo</p>
-      <pre>
-        <code>
-          @startuml
+      <pre><code>@startuml
           nwdiag {
               internet [ shape = cloud];
               internet -- router;
@@ -603,18 +537,14 @@
                 db;
               }
           }
-          @enduml
-        </code>
-      </pre>
+          @enduml</code></pre>
       <p>
         <img alt="16" src="https://drive.google.com/uc?export=view&amp;id=1-samF3AdSSBuELYcydNxTuOB06MmIa_w" />
       </p>
     </li>
     <li>
       <p>Con un grupo tercero</p>
-      <pre>
-        <code>
-          @startuml
+      <pre><code>@startuml
           nwdiag {
               internet [ shape = cloud];
               internet -- router;
@@ -633,18 +563,14 @@
                 db;
               }
             }
-            @enduml
-          </code>
-        </pre>
+            @enduml</code></pre>
         <p>
           <img alt="17" src="https://drive.google.com/uc?export=view&amp;id=1057yzKTDoB6hdXGKwuuAB7GhmFKORmv-" />
         </p>
       </li>
     </ol>
     <h4 id="10-anadir-titulo-texto-cabecera-pie-o-leyenda-en-el-diagrama">10. Anadir titulo, texto, cabecera, pie o leyenda en el diagrama</h4>
-    <pre>
-        <code>
-          @startuml
+    <pre><code>@startuml
 
           header CABECERA
 
@@ -663,9 +589,7 @@
           end legend
 
           caption Esto es el texto
-          @enduml
-        </code>
-      </pre>
+          @enduml</code></pre>
       <p>
         <img alt="18" src="https://drive.google.com/uc?export=view&amp;id=106JkKzXOYiIaLbMDfb-qHGipzZlEYY4_" />
       </p>
@@ -673,9 +597,7 @@
       <ol>
         <li>
           <p>Sin direccion o tipo</p>
-          <pre>
-            <code>
-              @startuml
+          <pre><code>@startuml
               nwdiag {
                  network LAN1 {
                      a [address = "a1"];
@@ -687,18 +609,14 @@
                  switch -- equip;
                  equip -- printer;
               }
-              @enduml
-            </code>
-          </pre>
+              @enduml</code></pre>
           <p>
             <img alt="19" src="https://drive.google.com/uc?export=view&amp;id=10DqAeMS_3GUVpAaAiaESRH7TpCretilX" />
           </p>
         </li>
         <li>
           <p>Con direccion o tipo</p>
-          <pre>
-            <code>
-              @startuml
+          <pre><code>@startuml
               nwdiag {
                  network LAN1 {
                      a [address = "a1"];
@@ -712,18 +630,14 @@
                  equip -- printer;
                  printer [address = "USB"];
               }
-              @enduml
-            </code>
-          </pre>
+              @enduml</code></pre>
           <p>
             <img alt="20" src="https://drive.google.com/uc?export=view&amp;id=10EvN9LxKPNe9Fcd1vco9b-9UUYIPTETP" />
           </p>
         </li>
       </ol>
       <h4 id="12-apendice-todas-las-formas-en-nwdiag">12. Apendice: Todas las formas en <em>nwdiag</em></h4>
-      <pre>
-        <code>
-          @startuml
+      <pre><code>@startuml
           nwdiag {
              network Network1 {
                  Actor       [shape = actor]       
@@ -763,9 +677,7 @@
                  Usecase     [shape = usecase]
              }
           }
-          @enduml
-        </code>
-      </pre>
+          @enduml</code></pre>
       <p>
         <img alt="21" src="https://drive.google.com/uc?export=view&amp;id=10PqYifds43V9jEa2DoI69VBsiiS1bGi1" />
       </p>
@@ -794,7 +706,8 @@
     </div>
 
     <footer class="col-md-12 wm-page-content">
-      <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+  <!--<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>-->
+      <p>Documentacion Goizargi Llona - Grado superior ASI 2º Dual</p>
     </footer>
 
   </body>
