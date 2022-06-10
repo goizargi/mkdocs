@@ -604,6 +604,3 @@ tbody > tr:nth-child(even), tbody > tr:nth-child(even) > td {
   background-color: #2C323C;
 }
 
-h4#kubernetes, p{
-  text-align: justify;
-}
