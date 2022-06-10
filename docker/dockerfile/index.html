@@ -63,35 +63,26 @@
       <h4 id="para-que-sirve">Para que sirve?</h4>
       <p>Archivo sin extension que crea imagenes de docker acorde a los comandos/instrucciones previamente establecidos</p>
       <h4 id="como-se-crea">Como se crea?</h4>
-      <pre>
-        <code>
-          FROM Nombre_imagen
+      <pre><code>FROM Nombre_imagen
           ENV [variables de entorno]
           USER [Nombre de usuario desde el que se quieran ejecutar las instrucciones]
           RUN [comandos a ejecutar]
-        </code>
-      </pre>
+        </code></pre>
       <h5 id="ejemplos">Ejemplos</h5>
       <h6 id="dockerfile-ubuntu">Dockerfile Ubuntu</h6>
-      <pre>
-        <code>
-          FROM ubuntu:latest
+      <pre><code>FROM ubuntu:latest
           RUN apt-get update &amp;&amp; apt-get upgrade
           RUN useradd -m nombre_usuario -p contrasena
           RUN mkdir /home/directorio_usuario/carpeta
-        </code>
-      </pre>
+        </code></pre>
       <hr />
       <h6 id="dockerfile-jenkins">Dockerfile Jenkins</h6>
-      <pre>
-        <code>
-          FROM jenkins/jenkins:lts
+      <pre><code>FROM jenkins/jenkins:lts
           ENV contrasena=abcd
           USER root
           RUN echo "hola"
           RUN apt-get update
-        </code>
-      </pre>
+        </code></pre>
       <br>
   <!--<div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
         <div class="wm-article-nav pull-right">
